@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ReadSchemaTopic &#8212; ncdssdk 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ncdsclient.internal.utils" href="utils.html" />
+    <link rel="prev" title="KafkaAvroConsumer" href="KafkaAvroConsumer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="ncdsclient.internal.utils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="KafkaAvroConsumer.html" title="KafkaAvroConsumer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ncdssdk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="internal.html" accesskey="U">ncdsclient.internal</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ReadSchemaTopic</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-ReadSchemaTopic">
+<span id="readschematopic"></span><h1>ReadSchemaTopic<a class="headerlink" href="#module-ReadSchemaTopic" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ReadSchemaTopic.</span></span><span class="sig-name descname"><span class="pre">ReadSchemaTopic</span></span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to Retrieve the Kafka Schema for the given Topic/Stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.control_schema_name">
+<span class="sig-name descname"><span class="pre">control_schema_name</span></span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.control_schema_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>“control” by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.security_props">
+<span class="sig-name descname"><span class="pre">security_props</span></span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.security_props" title="Permalink to this definition">¶</a></dt>
+<dd><p>properties to be passed in to the AuthenticationConfigLoader</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.kafka_props">
+<span class="sig-name descname"><span class="pre">kafka_props</span></span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.kafka_props" title="Permalink to this definition">¶</a></dt>
+<dd><p>properties to be passed in to the AuthenticationConfigLoader</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.consumer_props">
+<span class="sig-name descname"><span class="pre">consumer_props</span></span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.consumer_props" title="Permalink to this definition">¶</a></dt>
+<dd><p>a JSON dict from a user-editable file containing the num_messages and timeout parameters to be passed into a KafkaConsumer’s <cite>.consume()</cite> function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.get_consumer">
+<span class="sig-name descname"><span class="pre">get_consumer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.get_consumer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.get_topics">
+<span class="sig-name descname"><span class="pre">get_topics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.get_topics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.internal_schema">
+<span class="sig-name descname"><span class="pre">internal_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.internal_schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.read_schema">
+<span class="sig-name descname"><span class="pre">read_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.read_schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.set_kafka_props">
+<span class="sig-name descname"><span class="pre">set_kafka_props</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.set_kafka_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ReadSchemaTopic.ReadSchemaTopic.set_security_props">
+<span class="sig-name descname"><span class="pre">set_security_props</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ReadSchemaTopic.ReadSchemaTopic.set_security_props" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="KafkaAvroConsumer.html"
+                        title="previous chapter">KafkaAvroConsumer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="utils.html"
+                        title="next chapter">ncdsclient.internal.utils</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ReadSchemaTopic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="ncdsclient.internal.utils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="KafkaAvroConsumer.html" title="KafkaAvroConsumer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ncdssdk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="internal.html" >ncdsclient.internal</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ReadSchemaTopic</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Nasdaq.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>
