@@ -8,18 +8,12 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ncdssdk',
-    version='0.0.14.dev1',
+    version='1.0.0',
     description='A Python SDK for developing applications to access the NCDS API',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Nasdaq',
     classifiers=[
-        # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
-        'Development Status :: 1 - Planning',
-
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
@@ -41,7 +35,6 @@ setup(
     # We could possibly use entry_points parameter with console_scripts here to specify the NCDSSession script
 
     project_urls={  # Optional
-        # FIXME: github location
-        'Source': 'https://github.com',
+        'Source': 'https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python',
     },
 )
