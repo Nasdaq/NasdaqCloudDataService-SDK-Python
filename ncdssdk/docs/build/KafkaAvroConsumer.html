@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>KafkaAvroConsumer &#8212; ncdssdk 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ncdsclient.internal.utils" href="utils.html" />
+    <link rel="prev" title="BasicKafkaConsumer" href="BasicKafkaConsumer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="ncdsclient.internal.utils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="BasicKafkaConsumer.html" title="BasicKafkaConsumer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ncdssdk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="internal.html" accesskey="U">ncdsclient.internal</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">KafkaAvroConsumer</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-KafkaAvroConsumer">
+<span id="kafkaavroconsumer"></span><h1>KafkaAvroConsumer<a class="headerlink" href="#module-KafkaAvroConsumer" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="KafkaAvroConsumer.KafkaAvroConsumer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">KafkaAvroConsumer.</span></span><span class="sig-name descname"><span class="pre">KafkaAvroConsumer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_schema</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#KafkaAvroConsumer.KafkaAvroConsumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ncdssdk.src.main.python.ncdsclient.internal.BasicKafkaConsumer.BasicKafkaConsumer</span></code></p>
+<p>Kafka consumer for Avro messages.
+Expands <a class="reference internal" href="BasicKafkaConsumer.html#BasicKafkaConsumer.BasicKafkaConsumer" title="BasicKafkaConsumer.BasicKafkaConsumer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicKafkaConsumer</span></code></a> by passing in a key and value deserializer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="KafkaAvroConsumer.KafkaAvroConsumer.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#KafkaAvroConsumer.KafkaAvroConsumer.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict that stores configuration properties for the <a class="reference external" href="https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html#confluent_kafka.DeserializingConsumer">DeserializingConsumer</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="KafkaAvroConsumer.KafkaAvroConsumer.message_schema">
+<span class="sig-name descname"><span class="pre">message_schema</span></span><a class="headerlink" href="#KafkaAvroConsumer.KafkaAvroConsumer.message_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>schema used for decoding in <code class="xref py py-class docutils literal notranslate"><span class="pre">AvroDeserializer</span></code> class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Schema</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="KafkaAvroConsumer.KafkaAvroConsumer.assign">
+<span class="sig-name descname"><span class="pre">assign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partitions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#KafkaAvroConsumer.KafkaAvroConsumer.assign" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py function">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">assign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partitions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Set the consumer partition assignment to the provided list of <code class="xref py py-class docutils literal notranslate"><span class="pre">TopicPartition</span></code> and start consuming.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partitions</strong> (<em>list</em><em>(</em><em>TopicPartition</em><em>)</em>) – List of topic+partitions and optionally initial offsets to start consuming from.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>KafkaException</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>RuntimeError if called on a closed consumer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="BasicKafkaConsumer.html"
+                        title="previous chapter">BasicKafkaConsumer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="utils.html"
+                        title="next chapter">ncdsclient.internal.utils</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/KafkaAvroConsumer.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="ncdsclient.internal.utils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="BasicKafkaConsumer.html" title="BasicKafkaConsumer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ncdssdk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="internal.html" >ncdsclient.internal</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">KafkaAvroConsumer</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Nasdaq.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.0.
+    </div>
+  </body>
+</html>
