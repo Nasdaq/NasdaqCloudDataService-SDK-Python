@@ -19,9 +19,9 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 The SDK currently supports Python 3.9 and above
 
 ### Get the SDK
-The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​
-- Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​.git```
-- Move into the directory ```cd ncds-python-sample-consumer```
+The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python 
+- Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python.git```
+- Move into the directory ```cd NasdaqCloudDataService-SDK-Python```
 - Install the library and its dependencies from local source with ```pip install .```
 
 Optional: to use the Jupyter notebook provided, 
@@ -38,7 +38,7 @@ For example:
 
 ### Stream configuration
 
-  Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
+  Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
 
   Required kafka configuration
 
@@ -51,7 +51,7 @@ For example:
 
 ### Client Authentication configuration
 
-Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding. 
+Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding. 
 
 
 ```properties
