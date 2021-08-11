@@ -1,0 +1,5 @@
+{
+    "bootstrap.servers": "bootstrap-server-endpoint",
+    "ssl.ca.location": "ncdscert.crt",
+    "auto.offset.reset": "earliest"
+}
