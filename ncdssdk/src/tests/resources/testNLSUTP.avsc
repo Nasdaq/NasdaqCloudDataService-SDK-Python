@@ -1,0 +1,28 @@
+ {
+  "type" : "record",
+  "name" : "SeqAdjClosingPrice",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.nls.messaging.nls21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "adjClosingPrice",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}

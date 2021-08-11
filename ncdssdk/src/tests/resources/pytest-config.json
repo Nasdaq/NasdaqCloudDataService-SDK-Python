@@ -1,0 +1,5 @@
+{
+    "bootstrap.servers": "localhost:9092",
+    "ssl.ca.location": "ncdscert.crt",
+    "enable.auto.commit": false
+}
