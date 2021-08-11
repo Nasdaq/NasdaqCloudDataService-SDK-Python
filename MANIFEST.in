@@ -1,0 +1,11 @@
+include *.in
+include *.txt
+include ncdssdk/src/tests/resources/pytest-config.json
+recursive-include ncdssdk *.avsc
+recursive-include ncdssdk *.bat
+recursive-include ncdssdk *.json
+recursive-include ncdssdk *.py
+recursive-include ncdssdk *.rst
+recursive-include ncdssdk *.xml
+recursive-include ncdssdk Makefile
+recursive-include ncdssdk_client *.json
