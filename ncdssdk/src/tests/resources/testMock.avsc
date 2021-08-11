@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "SeqEtpIpvValue",
+  "namespace" : "com.nasdaq.mdic.mocker",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}

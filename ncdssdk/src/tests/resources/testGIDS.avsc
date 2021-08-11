@@ -1,0 +1,565 @@
+[ {
+  "type" : "record",
+  "name" : "SeqCommoditySummary",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "summaryType",
+    "type" : "string"
+  }, {
+    "name" : "sodValue",
+    "type" : "long"
+  }, {
+    "name" : "high",
+    "type" : "long"
+  }, {
+    "name" : "low",
+    "type" : "long"
+  }, {
+    "name" : "eodValue",
+    "type" : "long"
+  }, {
+    "name" : "netChange",
+    "type" : "long"
+  }, {
+    "name" : "effectiveDate",
+    "type" : "int"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEquitiesSummary",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "summaryType",
+    "type" : "string"
+  }, {
+    "name" : "sodValue",
+    "type" : "long"
+  }, {
+    "name" : "high",
+    "type" : "long"
+  }, {
+    "name" : "low",
+    "type" : "long"
+  }, {
+    "name" : "eodValue",
+    "type" : "long"
+  }, {
+    "name" : "netChange",
+    "type" : "long"
+  }, {
+    "name" : "effectiveDate",
+    "type" : "int"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEtpDirectoryAndDailyValue",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "industryMIC",
+    "type" : "string"
+  }, {
+    "name" : "etpTradingSymbol",
+    "type" : "string"
+  }, {
+    "name" : "etpIpvSymbol",
+    "type" : "string"
+  }, {
+    "name" : "schedule",
+    "type" : "string"
+  }, {
+    "name" : "frequency",
+    "type" : "string"
+  }, {
+    "name" : "state",
+    "type" : "string"
+  }, {
+    "name" : "navSymbol",
+    "type" : "string"
+  }, {
+    "name" : "NAV",
+    "type" : "long"
+  }, {
+    "name" : "ecuSymbol",
+    "type" : "string"
+  }, {
+    "name" : "ECU",
+    "type" : "long"
+  }, {
+    "name" : "totalCashSymbol",
+    "type" : "string"
+  }, {
+    "name" : "totalCash",
+    "type" : "long"
+  }, {
+    "name" : "ecsSymbol",
+    "type" : "string"
+  }, {
+    "name" : "ECS",
+    "type" : "long"
+  }, {
+    "name" : "tsoSymbol",
+    "type" : "string"
+  }, {
+    "name" : "tsoOutstanding",
+    "type" : "long"
+  }, {
+    "name" : "effectiveDate",
+    "type" : "int"
+  }, {
+    "name" : "yield",
+    "type" : "long"
+  }, {
+    "name" : "coupon",
+    "type" : "long"
+  }, {
+    "name" : "maturityDate",
+    "type" : "int"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  }, {
+    "name" : "etpName",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEtpIpvValue",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "ipvSymbol",
+    "type" : "string"
+  }, {
+    "name" : "ipvValue",
+    "type" : "long"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEtpSummary",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "summaryType",
+    "type" : "string"
+  }, {
+    "name" : "ipvSymbol",
+    "type" : "string"
+  }, {
+    "name" : "sodValue",
+    "type" : "long"
+  }, {
+    "name" : "high",
+    "type" : "long"
+  }, {
+    "name" : "low",
+    "type" : "long"
+  }, {
+    "name" : "eodValue",
+    "type" : "long"
+  }, {
+    "name" : "netChange",
+    "type" : "long"
+  }, {
+    "name" : "effectiveDate",
+    "type" : "int"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqFixedIncomeSummary",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "summaryType",
+    "type" : "string"
+  }, {
+    "name" : "sodValue",
+    "type" : "long"
+  }, {
+    "name" : "high",
+    "type" : "long"
+  }, {
+    "name" : "low",
+    "type" : "long"
+  }, {
+    "name" : "eodValue",
+    "type" : "long"
+  }, {
+    "name" : "netChange",
+    "type" : "long"
+  }, {
+    "name" : "effectiveDate",
+    "type" : "int"
+  }, {
+    "name" : "yield",
+    "type" : "long"
+  }, {
+    "name" : "duration",
+    "type" : "long"
+  }, {
+    "name" : "coupon",
+    "type" : "long"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIndexDirectory",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "disseminationFlag",
+    "type" : "string"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "strategy",
+    "type" : "string"
+  }, {
+    "name" : "assetType",
+    "type" : "string"
+  }, {
+    "name" : "marketCapSize",
+    "type" : "string"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  }, {
+    "name" : "geography",
+    "type" : "string"
+  }, {
+    "name" : "settlementType",
+    "type" : "string"
+  }, {
+    "name" : "calculationMethod",
+    "type" : "string"
+  }, {
+    "name" : "state",
+    "type" : "string"
+  }, {
+    "name" : "indexUsage",
+    "type" : "string"
+  }, {
+    "name" : "schedule",
+    "type" : "string"
+  }, {
+    "name" : "frequency",
+    "type" : "string"
+  }, {
+    "name" : "numberOfIssueParticipation",
+    "type" : "int"
+  }, {
+    "name" : "baseValue",
+    "type" : "long"
+  }, {
+    "name" : "baseDate",
+    "type" : "int"
+  }, {
+    "name" : "instrumentName",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIndexTickDetail",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "tickValue",
+    "type" : "long"
+  }, {
+    "name" : "tickDirection",
+    "type" : "string"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIssueSymbolParticipation",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "issueSymbol",
+    "type" : "string"
+  }, {
+    "name" : "issueMIC",
+    "type" : "string"
+  }, {
+    "name" : "issueName",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSettlementValue",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "fpType",
+    "type" : "string"
+  }, {
+    "name" : "brand",
+    "type" : "string"
+  }, {
+    "name" : "series",
+    "type" : "string"
+  }, {
+    "name" : "instrumentID",
+    "type" : "string"
+  }, {
+    "name" : "settlementValue",
+    "type" : "long"
+  }, {
+    "name" : "settlementType",
+    "type" : "string"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSystemEvent",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "timeStamp",
+    "type" : "int"
+  }, {
+    "name" : "event",
+    "type" : "string"
+  }, {
+    "name" : "schedule",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSystemSeconds",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.gids20feed.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "second",
+    "type" : "int"
+  } ],
+  "version" : "1"
+} ]
