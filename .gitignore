@@ -1,3 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/python
+# Edit at https://www.toptal.com/developers/gitignore?templates=python
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,14 +12,11 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -26,6 +27,9 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+#Jet Brains IDE
+.idea
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -50,6 +54,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+pytestdebug.log
 
 # Translations
 *.mo
@@ -70,6 +75,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+doc/_build/
 
 # PyBuilder
 target/
@@ -91,6 +97,9 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
+# poetry
+#poetry.lock
+
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
@@ -102,13 +111,15 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
+# .env
+.env/
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+pythonenv*
 
 # Spyder project settings
 .spyderproject
@@ -127,3 +138,21 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# operating system-related files
+# file properties cache/storage on macOS
+*.DS_Store
+# thumbnail cache on Windows
+Thumbs.db
+
+# profiling data
+.prof
+
+# certs
+*.crt
+
+
+# End of https://www.toptal.com/developers/gitignore/api/python
