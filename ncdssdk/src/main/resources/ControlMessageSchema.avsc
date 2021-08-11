@@ -1,0 +1,93 @@
+[
+   {
+    "name": "Heartbeat",
+    "type": "record",
+    "namespace": "com.nasdaq.fq.etl.kafka",
+    "fields": [
+      {
+        "name": "timestamp",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "StreamInitiated",
+    "namespace": "com.nasdaq.fq.etl.kafka",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "uuid",
+        "type": "string"
+      },
+      {
+        "name": "referenceDate",
+        "type": "string"
+      },
+      {
+        "name": "soupPartition",
+        "type": "int"
+      },
+      {
+        "name": "timestamp",
+        "type": "long"
+      },
+      {
+        "name": "schema",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "StreamCompleted",
+    "namespace": "com.nasdaq.fq.etl.kafka",
+    "fields": [
+      {
+        "name": "uuid",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "long"
+      },
+      {
+        "name": "finalSequenceNumber",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "StreamResumed",
+    "namespace": "com.nasdaq.fq.etl.kafka",
+    "fields": [
+      {
+        "name": "uuid",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "long"
+      },
+      {
+        "name": "resumeSequenceNumber",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "StreamDeleted",
+    "namespace": "com.nasdaq.fq.etl.kafka",
+    "fields": [
+      {
+        "name": "uuid",
+        "type": "string"
+      }
+    ]
+  }
+]
