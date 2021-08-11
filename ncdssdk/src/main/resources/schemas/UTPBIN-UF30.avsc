@@ -1,0 +1,3715 @@
+[ {
+  "type" : "record",
+  "name" : "SeqAdminText",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "text",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAlternateSymbol",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "symbolType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAsOfTrade",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "month",
+    "type" : "string"
+  }, {
+    "name" : "day",
+    "type" : "string"
+  }, {
+    "name" : "year",
+    "type" : "int"
+  }, {
+    "name" : "reportNanos",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAsOfTradeCancel",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "month",
+    "type" : "string"
+  }, {
+    "name" : "day",
+    "type" : "string"
+  }, {
+    "name" : "year",
+    "type" : "int"
+  }, {
+    "name" : "reportNanos",
+    "type" : "long"
+  }, {
+    "name" : "cancelFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAsOfTradeCorrection",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "oldTradeId",
+    "type" : "int"
+  }, {
+    "name" : "oldDenom",
+    "type" : "string"
+  }, {
+    "name" : "oldPrice",
+    "type" : "long"
+  }, {
+    "name" : "oldVolume",
+    "type" : "long"
+  }, {
+    "name" : "oldPriceFlags",
+    "type" : "string"
+  }, {
+    "name" : "oldEligFlags",
+    "type" : "string"
+  }, {
+    "name" : "oldReportFlags",
+    "type" : "int"
+  }, {
+    "name" : "oldMonth",
+    "type" : "string"
+  }, {
+    "name" : "oldDay",
+    "type" : "string"
+  }, {
+    "name" : "oldYear",
+    "type" : "int"
+  }, {
+    "name" : "oldReportNanos",
+    "type" : "long"
+  }, {
+    "name" : "newTradeId",
+    "type" : "int"
+  }, {
+    "name" : "newDenom",
+    "type" : "string"
+  }, {
+    "name" : "newPrice",
+    "type" : "long"
+  }, {
+    "name" : "newVolume",
+    "type" : "long"
+  }, {
+    "name" : "newPriceFlags",
+    "type" : "string"
+  }, {
+    "name" : "newEligFlags",
+    "type" : "string"
+  }, {
+    "name" : "newReportFlags",
+    "type" : "int"
+  }, {
+    "name" : "newMonth",
+    "type" : "string"
+  }, {
+    "name" : "newDay",
+    "type" : "string"
+  }, {
+    "name" : "newYear",
+    "type" : "int"
+  }, {
+    "name" : "newReportNanos",
+    "type" : "long"
+  }, {
+    "name" : "correctionFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAsOfTradeFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "priceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "priceFractional",
+    "type" : "int"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "month",
+    "type" : "string"
+  }, {
+    "name" : "day",
+    "type" : "string"
+  }, {
+    "name" : "year",
+    "type" : "int"
+  }, {
+    "name" : "reportNanos",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqAsOfValueUpdate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "month",
+    "type" : "string"
+  }, {
+    "name" : "day",
+    "type" : "string"
+  }, {
+    "name" : "year",
+    "type" : "int"
+  }, {
+    "name" : "valueNanos",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqCapitalDistributions",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "reportType",
+    "type" : "string"
+  }, {
+    "name" : "paymentMonth",
+    "type" : "string"
+  }, {
+    "name" : "paymentDay",
+    "type" : "string"
+  }, {
+    "name" : "paymentYear",
+    "type" : "int"
+  }, {
+    "name" : "recordMonth",
+    "type" : "string"
+  }, {
+    "name" : "recordDay",
+    "type" : "string"
+  }, {
+    "name" : "recordYear",
+    "type" : "int"
+  }, {
+    "name" : "exMonth",
+    "type" : "string"
+  }, {
+    "name" : "exDay",
+    "type" : "string"
+  }, {
+    "name" : "exYear",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "amount",
+    "type" : "long"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqChannelDay",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "dayOfMonth",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqChannelEvent",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "event",
+    "type" : "string"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqChannelSeconds",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "seconds",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqCombinationLeg",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "legLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "ratioDenom",
+    "type" : "string"
+  }, {
+    "name" : "ratio",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqDividend",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "reportType",
+    "type" : "string"
+  }, {
+    "name" : "paymentMonth",
+    "type" : "string"
+  }, {
+    "name" : "paymentDay",
+    "type" : "string"
+  }, {
+    "name" : "paymentYear",
+    "type" : "int"
+  }, {
+    "name" : "recordMonth",
+    "type" : "string"
+  }, {
+    "name" : "recordDay",
+    "type" : "string"
+  }, {
+    "name" : "recordYear",
+    "type" : "int"
+  }, {
+    "name" : "exMonth",
+    "type" : "string"
+  }, {
+    "name" : "exDay",
+    "type" : "string"
+  }, {
+    "name" : "exYear",
+    "type" : "int"
+  }, {
+    "name" : "dividendType",
+    "type" : "string"
+  }, {
+    "name" : "totalCashDenom",
+    "type" : "string"
+  }, {
+    "name" : "totalCash",
+    "type" : "long"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEndOfSnapshot",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "nextSequence",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqExchangeIdLocate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "exchangeId",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIndexSymbolParticipation",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "cLocate",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqInstrumentImbalance",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "imbalanceType",
+    "type" : "string"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqInstrumentLocate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "locate",
+    "type" : "int"
+  }, {
+    "name" : "country",
+    "type" : "string"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  }, {
+    "name" : "mic",
+    "type" : "string"
+  }, {
+    "name" : "productType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqInstrumentMetaData",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqInstrumentStatus",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "statusType",
+    "type" : "string"
+  }, {
+    "name" : "statusCode",
+    "type" : "string"
+  }, {
+    "name" : "reason",
+    "type" : "string"
+  }, {
+    "name" : "statusFlags",
+    "type" : "string"
+  }, {
+    "name" : "detail",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMarketCenterLocate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "locate",
+    "type" : "int"
+  }, {
+    "name" : "mic",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMarketMakerLocate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "locate",
+    "type" : "int"
+  }, {
+    "name" : "mmid",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMarketMakerStatus",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqNewsUpdate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "newsTime",
+    "type" : "int"
+  }, {
+    "name" : "month",
+    "type" : "string"
+  }, {
+    "name" : "day",
+    "type" : "string"
+  }, {
+    "name" : "year",
+    "type" : "int"
+  }, {
+    "name" : "headline",
+    "type" : "string"
+  }, {
+    "name" : "news",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedNBBOExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedNBBOLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedNBBOShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedQuoteExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedQuoteFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "priceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "priceFractional",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedQuoteLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOneSidedQuoteShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOptionDeliveryComponent",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "rLocate",
+    "type" : "int"
+  }, {
+    "name" : "index",
+    "type" : "int"
+  }, {
+    "name" : "total",
+    "type" : "int"
+  }, {
+    "name" : "deliverableUnits",
+    "type" : "int"
+  }, {
+    "name" : "settlementMethod",
+    "type" : "string"
+  }, {
+    "name" : "fixedAmtDenom",
+    "type" : "string"
+  }, {
+    "name" : "fixedAmt",
+    "type" : "long"
+  }, {
+    "name" : "currency",
+    "type" : "string"
+  }, {
+    "name" : "strikePct",
+    "type" : "int"
+  }, {
+    "name" : "cLocate",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderAddedExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderAddedLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderAddedShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderBookClear",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderCanceled",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderDeleted",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderExecuted",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderExecutedAtPrice",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderExecutedAtPriceSize",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "leaves",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqOrderModified",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "orderId",
+    "type" : "long"
+  }, {
+    "name" : "newOrderId",
+    "type" : "long"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "quantity",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelAddExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelAddFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "priceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "priceFractional",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelAddLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelAddShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelBookClear",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelDeleteExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelDeleteLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelDeleteShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelModifyExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelModifyFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "priceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "priceFractional",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelModifyLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceLevelModifyShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "side",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "count",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqPriceRangeIndication",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "indicationType",
+    "type" : "string"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "lowDenom",
+    "type" : "string"
+  }, {
+    "name" : "lowPrice",
+    "type" : "long"
+  }, {
+    "name" : "highDenom",
+    "type" : "string"
+  }, {
+    "name" : "highPrice",
+    "type" : "long"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqRequestForQuote",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "requestId",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSystemEvent",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "nanos",
+    "type" : "long"
+  }, {
+    "name" : "event",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCancel",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "cancelFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCorrection",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "oldTradeId",
+    "type" : "int"
+  }, {
+    "name" : "oldDenom",
+    "type" : "string"
+  }, {
+    "name" : "oldPrice",
+    "type" : "long"
+  }, {
+    "name" : "oldVolume",
+    "type" : "long"
+  }, {
+    "name" : "oldPriceFlags",
+    "type" : "string"
+  }, {
+    "name" : "oldEligFlags",
+    "type" : "string"
+  }, {
+    "name" : "oldReportFlags",
+    "type" : "int"
+  }, {
+    "name" : "newTradeId",
+    "type" : "int"
+  }, {
+    "name" : "newDenom",
+    "type" : "string"
+  }, {
+    "name" : "newPrice",
+    "type" : "long"
+  }, {
+    "name" : "newVolume",
+    "type" : "long"
+  }, {
+    "name" : "newPriceFlags",
+    "type" : "string"
+  }, {
+    "name" : "newEligFlags",
+    "type" : "string"
+  }, {
+    "name" : "newReportFlags",
+    "type" : "int"
+  }, {
+    "name" : "correctionFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "changeFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "denom",
+    "type" : "string"
+  }, {
+    "name" : "priceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "priceFractional",
+    "type" : "int"
+  }, {
+    "name" : "volume",
+    "type" : "long"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "changeFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "volume",
+    "type" : "int"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "changeFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "tradeId",
+    "type" : "int"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "volume",
+    "type" : "int"
+  }, {
+    "name" : "priceFlags",
+    "type" : "string"
+  }, {
+    "name" : "eligFlags",
+    "type" : "string"
+  }, {
+    "name" : "reportFlags",
+    "type" : "int"
+  }, {
+    "name" : "changeFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedNBBOExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidDenom",
+    "type" : "string"
+  }, {
+    "name" : "bidPrice",
+    "type" : "long"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "askDenom",
+    "type" : "string"
+  }, {
+    "name" : "askPrice",
+    "type" : "long"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedNBBOLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedNBBOShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askMCLocate",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "nbboFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedQuoteExtended",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidDenom",
+    "type" : "string"
+  }, {
+    "name" : "bidPrice",
+    "type" : "long"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askDenom",
+    "type" : "string"
+  }, {
+    "name" : "askPrice",
+    "type" : "long"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "bidFlags",
+    "type" : "string"
+  }, {
+    "name" : "askFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedQuoteFractional",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidDenom",
+    "type" : "string"
+  }, {
+    "name" : "bidPriceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "bidPriceFractional",
+    "type" : "int"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askDenom",
+    "type" : "string"
+  }, {
+    "name" : "askPriceDecimal",
+    "type" : "long"
+  }, {
+    "name" : "askPriceFractional",
+    "type" : "int"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "bidFlags",
+    "type" : "string"
+  }, {
+    "name" : "askFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedQuoteLong",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "bidFlags",
+    "type" : "string"
+  }, {
+    "name" : "askFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTwoSidedQuoteShort",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "mmLocate",
+    "type" : "int"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidSize",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askSize",
+    "type" : "int"
+  }, {
+    "name" : "condition",
+    "type" : "string"
+  }, {
+    "name" : "quoteFlags",
+    "type" : "string"
+  }, {
+    "name" : "bidFlags",
+    "type" : "string"
+  }, {
+    "name" : "askFlags",
+    "type" : "string"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqValueUpdate",
+  "namespace" : "com.nasdaq.marketdata.sequencer.applications.datafeed.ultrafeed.ultrafeed30.messaging",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "protocol",
+    "type" : "string"
+  }, {
+    "name" : "channelIndex",
+    "type" : "string"
+  }, {
+    "name" : "msgFlags",
+    "type" : "string"
+  }, {
+    "name" : "srcSequence",
+    "type" : "int"
+  }, {
+    "name" : "srcNanos",
+    "type" : "int"
+  }, {
+    "name" : "sLocate",
+    "type" : "int"
+  }, {
+    "name" : "mcLocate",
+    "type" : "int"
+  }, {
+    "name" : "flags",
+    "type" : "int"
+  }, {
+    "name" : "appendages",
+    "type" : "bytes"
+  } ],
+  "version" : "1"
+} ]

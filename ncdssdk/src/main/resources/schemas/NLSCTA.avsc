@@ -1,0 +1,673 @@
+[ {
+  "type" : "record",
+  "name" : "SeqAdjClosingPrice",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "adjClosingPrice",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqDirectoryMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "marketClass",
+    "type" : "string"
+  }, {
+    "name" : "fsi",
+    "type" : "string"
+  }, {
+    "name" : "roundLotSize",
+    "type" : [ "null", "int" ]
+  }, {
+    "name" : "roundLotOnly",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "issueClass",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "issueSubtype",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "authenticity",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "shortThreshold",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "ipo",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "luldTier",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "etf",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "etfFactor",
+    "type" : [ "null", "int" ]
+  }, {
+    "name" : "inverseETF",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "compositeId",
+    "type" : [ "null", "string" ]
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEndOfDayTradeSummary",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "highPrice",
+    "type" : "int"
+  }, {
+    "name" : "lowPrice",
+    "type" : "int"
+  }, {
+    "name" : "NOCP",
+    "type" : "int"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEndOfDayTradeSummaryETMF",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "highPrice",
+    "type" : "int"
+  }, {
+    "name" : "highPriceNAV",
+    "type" : "int"
+  }, {
+    "name" : "lowPrice",
+    "type" : "int"
+  }, {
+    "name" : "lowPriceNAV",
+    "type" : "int"
+  }, {
+    "name" : "NOCP",
+    "type" : "int"
+  }, {
+    "name" : "NOCPNAV",
+    "type" : "int"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIPOMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "refForNetChange",
+    "type" : "string"
+  }, {
+    "name" : "refPrice",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIpoQuoting",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "releaseTime",
+    "type" : "int"
+  }, {
+    "name" : "releaseQualifier",
+    "type" : "string"
+  }, {
+    "name" : "ipoPrice",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMWCB",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "level1",
+    "type" : "long"
+  }, {
+    "name" : "level2",
+    "type" : "long"
+  }, {
+    "name" : "level3",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMWCBStatus",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "level",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMarketCenterActionMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "market",
+    "type" : "string"
+  }, {
+    "name" : "action",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqShortSaleRestrictionIndicator",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "regSHOAction",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSystemEventMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "event",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCancel",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "int"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCancelETMFMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "int"
+  }, {
+    "name" : "origNavPrice",
+    "type" : "int"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCorrection",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "int"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "correctedControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "correctedPrice",
+    "type" : "int"
+  }, {
+    "name" : "correctedSize",
+    "type" : "int"
+  }, {
+    "name" : "correctedSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeCorrectionETMFMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "int"
+  }, {
+    "name" : "origNavPremium",
+    "type" : "int"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "correctedControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "correctedPrice",
+    "type" : "int"
+  }, {
+    "name" : "correctedNavPremium",
+    "type" : "int"
+  }, {
+    "name" : "correctedSize",
+    "type" : "int"
+  }, {
+    "name" : "correctedSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeReportETMFMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "controlNumber",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "navPremium",
+    "type" : "int"
+  }, {
+    "name" : "saleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeReportMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "controlNumber",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "int"
+  }, {
+    "name" : "size",
+    "type" : "int"
+  }, {
+    "name" : "saleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradingStateMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "filler",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "market",
+    "type" : "string"
+  }, {
+    "name" : "tradingState",
+    "type" : "string"
+  }, {
+    "name" : "reason",
+    "type" : "string"
+  } ],
+  "version" : "1"
+} ]

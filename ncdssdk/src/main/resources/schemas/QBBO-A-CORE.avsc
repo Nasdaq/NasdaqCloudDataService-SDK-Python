@@ -1,0 +1,343 @@
+[ {
+  "type" : "record",
+  "name" : "SeqDirectoryMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "marketCategory",
+    "type" : "string"
+  }, {
+    "name" : "fsi",
+    "type" : "string"
+  }, {
+    "name" : "roundLotSize",
+    "type" : "int"
+  }, {
+    "name" : "roundLotOnly",
+    "type" : "string"
+  }, {
+    "name" : "issueClass",
+    "type" : "string"
+  }, {
+    "name" : "issueSubtype",
+    "type" : "string"
+  }, {
+    "name" : "authenticity",
+    "type" : "string"
+  }, {
+    "name" : "shortThreshold",
+    "type" : "string"
+  }, {
+    "name" : "ipo",
+    "type" : "string"
+  }, {
+    "name" : "luldTier",
+    "type" : "string"
+  }, {
+    "name" : "etf",
+    "type" : "string"
+  }, {
+    "name" : "etfFactor",
+    "type" : "int"
+  }, {
+    "name" : "inverseETF",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqETMFQuoteMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "market",
+    "type" : "string"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidQuantity",
+    "type" : "int"
+  }, {
+    "name" : "bidNavPremium",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askQuantity",
+    "type" : "int"
+  }, {
+    "name" : "askNavPremium",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqIPOQuotePeriodMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "releaseTime",
+    "type" : "int"
+  }, {
+    "name" : "releaseQualifier",
+    "type" : "string"
+  }, {
+    "name" : "ipoPrice",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMWCBDeclineMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "level1",
+    "type" : "long"
+  }, {
+    "name" : "level2",
+    "type" : "long"
+  }, {
+    "name" : "level3",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMWCBStatusMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "breachLevel",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqMarketCenterActionMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "action",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqQuoteMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "market",
+    "type" : "string"
+  }, {
+    "name" : "bidPrice",
+    "type" : "int"
+  }, {
+    "name" : "bidQuantity",
+    "type" : "int"
+  }, {
+    "name" : "askPrice",
+    "type" : "int"
+  }, {
+    "name" : "askQuantity",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqRegSHORestrictionMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "regSHOAction",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqRetailInterestMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "interest",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqSystemEventMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "event",
+    "type" : "string"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradingStateMessage",
+  "namespace" : "com.nasdaq.equities.island.applications.datafeed.qbbo.messaging21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "market",
+    "type" : "string"
+  }, {
+    "name" : "tradingState",
+    "type" : "string"
+  }, {
+    "name" : "reason",
+    "type" : "string"
+  } ],
+  "version" : "1"
+} ]
