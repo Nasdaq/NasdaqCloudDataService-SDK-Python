@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "NewsAvro",
+  "namespace" : "com.nasdaq.ncds.news",
+  "fields" : [ {
+    "name" : "ReleaseTime",
+    "type" : "string"
+  }, {
+    "name" : "TransmissionID",
+    "type" : "string"
+  }, {
+    "name" : "RevisionID",
+    "type" : "string"
+  }, {
+     "name" : "Retract",
+     "type" : "string"
+  }, {
+     "name" : "StoryType",
+     "type" : "string"
+  }, {
+      "name" : "TechnicalStory",
+      "type" : "string"
+  }, {
+      "name" : "Metadata",
+      "type" : "string"
+  }, {
+      "name" : "Headline",
+      "type" : "string"
+  }, {
+      "name" : "Body",
+      "type" : "string"
+  }, {
+      "name" : "Tickers",
+      "type" : "string"
+  }, {
+      "name" : "Copyright",
+      "type" : "string"
+  },{
+      "name" : "ISIN",
+      "type" : "string"
+  }, {
+      "name" : "ArticleImage",
+      "type" : "string"
+  }],
+  "version" : "1"
+}

@@ -5,7 +5,7 @@ from ncdssdk.src.main.python.ncdsclient.internal.ReadSchemaTopic import ReadSche
 from ncdssdk.src.main.python.ncdsclient.internal.KafkaAvroConsumer import KafkaAvroConsumer
 from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
 from ncdssdk.src.main.python.ncdsclient.internal.utils import IsItPyTest, SeekToMidnight
-from confluent_kafka import TopicPartition, OFFSET_INVALID, OFFSET_END
+from confluent_kafka import TopicPartition, OFFSET_INVALID, OFFSET_END, OFFSET_BEGINNING
 import ncdssdk.src.main.python.ncdsclient.internal.utils.ConsumerConfig as config
 from datetime import datetime
 from ncdssdk.src.main.python.ncdsclient.internal.utils.Oauth import Oauth
@@ -78,7 +78,7 @@ class NasdaqKafkaAvroConsumer():
                 "Kafka Schema not found for stream: " + stream_name)
         kafka_consumer = self.get_consumer(kafka_schema, stream_name)
         topic_partition = TopicPartition(
-            topic=stream_name + ".stream", partition=0, offset=OFFSET_END)
+            topic=stream_name + ".stream", partition=0, offset=OFFSET_BEGINNING)
         self.logger.debug(
             f"Assigning kafka consumer to topic partition: {topic_partition}")
         kafka_consumer.assign([topic_partition])
