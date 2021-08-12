@@ -78,7 +78,7 @@ class NasdaqKafkaAvroConsumer():
                 "Kafka Schema not found for stream: " + stream_name)
         kafka_consumer = self.get_consumer(kafka_schema, stream_name)
         topic_partition = TopicPartition(
-            topic=stream_name + ".stream", partition=0, offset=OFFSET_BEGINNING)
+            topic=stream_name + ".stream", partition=0, offset=OFFSET_END)
         self.logger.debug(
             f"Assigning kafka consumer to topic partition: {topic_partition}")
         kafka_consumer.assign([topic_partition])

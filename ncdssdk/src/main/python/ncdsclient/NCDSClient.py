@@ -76,8 +76,8 @@ class NCDSClient:
         """
         Retrieves the apache kafka consumer. If the timestamp is not set, the consumer will
         start consuming at midnight of this day if auto.offset.reset in the kafka_cfg is set to
-        earliest. If auto.offset.reset is not set to earliest, the consumer will start consuming
-        at the smallest offset.
+        earliest. If auto.offset.reset is set to some variation of 'latest', the consumer will
+        start consuming at the end offset.
 
         Args:
             topic (string): Topic/Stream name
