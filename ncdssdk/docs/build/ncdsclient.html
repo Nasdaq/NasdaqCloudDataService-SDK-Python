@@ -149,8 +149,9 @@ Final sequence number is delivered in the stream_completed event.</p>
 <dt class="sig sig-object py" id="ncdssdk.src.main.python.ncdsclient.NCDSClient.NCDSClient.ncds_kafka_consumer">
 <span class="sig-name descname"><span class="pre">ncds_kafka_consumer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ncdssdk.src.main.python.ncdsclient.NCDSClient.NCDSClient.ncds_kafka_consumer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the apache kafka consumer. If the timestamp is not set, the consumer will
-start consuming at either the earliest or latest offset, depending on the value set
-for auto.offset.reset in kafka_cfg.</p>
+start consuming at midnight of this day if auto.offset.reset in the kafka_cfg is set to
+earliest. If auto.offset.reset is not set to earliest, the consumer will start consuming
+at the smallest offset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -246,7 +247,7 @@ for auto.offset.reset in kafka_cfg.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Nasdaq.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
     </div>
   </body>
 </html>
