@@ -7,7 +7,7 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 
 * Connecting to the API requires credentials, which are provided by the Nasdaq Data Operations team during an on-boarding process
 * This sample code only connects to one topic (NLSCTA); during on-boarding process, you will receive a topic list that you're entitled to.
-* See https://github.com/Nasdaq/CloudDataService for our officially support Java-based SDK.
+* See https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java for our officially support Java-based SDK.
 
 
 # Table of Contents
@@ -122,7 +122,7 @@ kafka_cfg = {
   ```python
   ncds_client = NCDSClient(security_cfg, kafka_cfg)
   topics = ncds_client.list_topics_for_client()
-  print("Entitled data set topics:")
+  print("Data set topics:")
   for topic_entry in topics:
   print(topic_entry)
   ```
@@ -343,7 +343,7 @@ An addition to the example application, there is extra documentation at the pack
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate
+Please make sure to update tests as appropriate.
 
 ## License
 
