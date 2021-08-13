@@ -22,7 +22,7 @@ The SDK currently supports Python 3.9 and above
 The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python 
 - Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python.git```
 - Move into the directory ```cd NasdaqCloudDataService-SDK-Python```
-- Install the library and its dependencies from local source with ```pip install .```
+- Install the library and its dependencies from local source with ```pip install -e .```
 
 Optional: to use the Jupyter notebook provided, 
 - Download Jupyter notebook using either pip ```pip3 install notebook``` or conda ```conda install -c conda-forge notebook```
