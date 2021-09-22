@@ -29,7 +29,7 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 
 
 
-### Items To Note
+# Items To Note
 
 * Connecting to the API requires credentials, which are provided by the Nasdaq Data Operations team during an on-boarding process
 * This sample code only connects to one topic (NLSCTA); during on-boarding process, you will receive a topic list that you're entitled to.
