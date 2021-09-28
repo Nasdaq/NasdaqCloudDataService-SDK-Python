@@ -39,7 +39,7 @@ def test_top_messages_with_timestamp():
     records = ncds_client.top_messages(topic, timestamp)
     for record in records:
         print(record.offset(), record.timestamp())
-        mock_records_from_kafka.append(json.loads(record.value()))
+        mock_records_from_kafka.append(record.value())
     assert len(mock_records_from_kafka) == 8
     assert mock_records[2:] == mock_records_from_kafka
 
@@ -53,7 +53,7 @@ def test_insertion():
     ncds_client = NCDSClient(None, None)
     records = ncds_client.top_messages(topic)
     for record in records:
-        mock_records_from_kafka.append(json.loads(record.value()))
+        mock_records_from_kafka.append(record.value())
     assert mock_records == mock_records_from_kafka
 
 

@@ -49,7 +49,7 @@ class ReadSchemaTopic:
                 break
             for message in reversed(schema_messages):
                 try:
-                    msg_val = json.loads(message.value())
+                    msg_val = message.value()
 
                     latest_record = None
                     if "name" in msg_val and msg_val["name"] == topic:
@@ -64,7 +64,7 @@ class ReadSchemaTopic:
         message_schema = None
        # print("schema consumer", schema_consumer)
         if latest_record:
-            latest_record_val = json.loads(latest_record.value())
+            latest_record_val = latest_record.value()
             message_schema = avro.schema.parse(latest_record_val['schema'])
         schema_consumer.close()
 
@@ -94,7 +94,7 @@ class ReadSchemaTopic:
             if message is None:
                 break
 
-            msg_val = json.loads(message.value())
+            msg_val = message.value()
 
             name = msg_val['name']
             topics.add(name)

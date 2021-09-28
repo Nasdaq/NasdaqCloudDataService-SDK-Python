@@ -172,7 +172,7 @@ class NCDSSession:
                         symbol = None
                         msg_name = None
                         try:
-                            msg_val = json.loads(message.value())
+                            msg_val = message.value()
                             symbol = msg_val['symbol']
                             msg_name = msg_val['schema_name']
                             self.logger.debug(
