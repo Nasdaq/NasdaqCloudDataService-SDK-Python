@@ -26,6 +26,7 @@ class AvroDeserializer():
             event_dict = reader.read(decoder)
         except Exception as e:
             logging.exception(e)
+            raise e
 
         union_schema = True
         try:
@@ -48,7 +49,4 @@ class AvroDeserializer():
         else:
             event_dict["schema_name"] = reader.readers_schema.name
 
-        json_data = json.dumps(event_dict)
-
-        # Add new field 'schema_name' so that the user can filter a message by the schema name
-        return json_data
+        return event_dict

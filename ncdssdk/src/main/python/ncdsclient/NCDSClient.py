@@ -134,7 +134,7 @@ class NCDSClient:
                         "--------------------------------END of Stream------------------")
                     break
                 for message in messages:
-                    msg_val = json.loads(message.value())
+                    msg_val = message.value()
                     if "schema_name" in msg_val and msg_val["schema_name"] == message_name:
                         sample_msg = str(msg_val)
                         if all_messages:
