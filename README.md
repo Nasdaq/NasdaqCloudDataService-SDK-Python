@@ -302,7 +302,7 @@ while True:
         print(f"No Records Found for the Topic: {topic}")
               
     for message in messages:
-        print(f"value :" + message.value())
+        print(f"value :" + str(message.value()))
 ```
 
 Example output:
