@@ -68,9 +68,12 @@ For example:
 
   Required kafka configuration
 
+  **Note**: Ensure that the full path to the ca.crt file is provided. If the certificate was installed in the directory 
+  `/my/trusted/store/ncdsinstallcerts`, then the full path would be `/my/trusted/store/ncdsinstallcerts/ca.crt`
+
 ```properties
-"bootstrap.servers": {streams_endpoint_url}:9094
-"ssl.ca.location": ca.crt
+"bootstrap.servers": "{streams_endpoint_url}:9094"
+"ssl.ca.location": "/path/to/dir/ca.crt"
 ```
 
   For optional consumer configurations see: https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md
@@ -81,9 +84,9 @@ Replace example client authentication properties in the file **client-authentica
 
 
 ```properties
-oauth.token.endpoint.uri: https://{auth_endpoint_url}/auth/realms/demo/protocol/openid-connect/token
-oauth.client.id: client
-oauth.client.secret: client-secret
+oauth.token.endpoint.uri: "https://{auth_endpoint_url}/auth/realms/demo/protocol/openid-connect/token"
+oauth.client.id: "client_id"
+oauth.client.secret: "client_secret"
 ```
 
 ### Create NCDS Session Client
