@@ -69,9 +69,6 @@ For example:
   **Note**: Ensure that the full path to the ca.crt file is provided. If the certificate was installed in the directory 
   `/my/trusted/store/ncdsinstallcerts`, then the full path would be `/my/trusted/store/ncdsinstallcerts/ca.crt`
 
-  **Note**: Ensure that the full path to the ca.crt file is provided. If the certificate was installed in the directory 
-  `/my/trusted/store/ncdsinstallcerts`, then the full path would be `/my/trusted/store/ncdsinstallcerts/ca.crt`
-
 ```properties
 "bootstrap.servers": "{streams_endpoint_url}:9094"
 "ssl.ca.location": "/path/to/dir/ca.crt"
