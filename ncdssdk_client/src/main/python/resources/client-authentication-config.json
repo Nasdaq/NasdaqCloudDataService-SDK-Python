@@ -1,5 +1,5 @@
 {
-    "oauth.token.endpoint.uri": "https://{auth_endpoint_url}/auth/realms/demo/protocol/openid-connect/token",
+    "oauth.token.endpoint.uri": "https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token",
     "oauth.client.id": "client-id",
     "oauth.client.secret": "client-secret"
 }
