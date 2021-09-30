@@ -82,7 +82,7 @@ Replace example client authentication properties in the file **client-authentica
 
 
 ```properties
-oauth.token.endpoint.uri: "https://{auth_endpoint_url}/auth/realms/demo/protocol/openid-connect/token"
+oauth.token.endpoint.uri: "https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token"
 oauth.client.id: "client_id"
 oauth.client.secret: "client_secret"
 ```
