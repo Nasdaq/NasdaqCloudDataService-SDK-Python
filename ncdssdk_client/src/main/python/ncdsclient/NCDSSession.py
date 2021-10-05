@@ -133,7 +133,7 @@ class NCDSSession:
                 if message is None:
                     print(f"No Records Found for the Topic: {self.topic}")
                 else:
-                    print(f"value :" + message.value())
+                    print(f"value :" + str(message.value()))
                     consumer.commit(message=message, asynchronous=True)
 
         except KafkaException as e:
@@ -179,7 +179,7 @@ class NCDSSession:
                                 f"{symbol}, msg_name: {msg_name}")
                             if (not self.symbols or symbol in symbol_set) and (
                                     not self.msgnames or msg_name in msgname_set):
-                                print(message.value())
+                                print(str(message.value()))
 
                         except KeyError:
                             pass
