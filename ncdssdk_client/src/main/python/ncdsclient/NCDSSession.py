@@ -3,7 +3,6 @@ import click
 import sys
 import logging
 from ncdssdk.src.main.python.ncdsclient.NCDSClient import NCDSClient
-from ncdssdk.src.main.python.ncdsclient.internal.utils.InstallCertificates import InstallCertificates
 from ncdssdk_client.src.main.python.ncdsclient.utils.ValidateInput import ValidateInput
 from confluent_kafka import KafkaException
 from importlib import resources
@@ -22,7 +21,6 @@ class NCDSSession:
         self.symbols = cmd['symbols']
         self.msgnames = cmd['msgnames']
         self.message_name = cmd['msgname']
-        self.certificate_path = cmd['path']
         self.num_top_messages = cmd['n']
         self.timestamp = cmd['timestamp']
 
@@ -78,15 +76,6 @@ class NCDSSession:
                     sys.exit(0)
                 ncds_client.get_sample_messages(
                     self.topic, self.message_name, True)
-
-            elif self.test_option == "INSTALLCERTS":
-                try:
-                    print("Installing Certificates")
-                    # TODO: This could return the name of the full path of the certificate
-                    InstallCertificates(self.certificate_path).install()
-                    print(f"Installed certificate at: {self.certificate_path}")
-                except Exception as e:
-                    logging.exception(f"Error in installing certificates {e}")
 
             elif self.test_option == "TOPICS":
                 ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
