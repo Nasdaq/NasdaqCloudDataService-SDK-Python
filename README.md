@@ -2,12 +2,36 @@
 
 Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of delivery for realtime exchange data and other financial information. Data is made available through a suite of APIs, allowing for effortless integration of data from disparate sources, and a dramatic reduction in time to market for customer-designed applications. The API is highly scalable, and robust enough to support the delivery of real-time exchange data.  
 
+# Products Currently Available
+### Equities
+#### The Nasdaq Stock Market
+- [Nasdaq Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NasdaqBasic-Cloud.pdf)
+- [Nasdaq Last Sale+](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NLSPlus-cloud.pdf)
+- [Nasdaq TotalView](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Totalview-ITCH-cloud.pdf)
+- [Nasdaq Consolidated Quotes and Trades](https://github.com/Nasdaq/CloudDataService/raw/master/specs/CQT-cloud.pdf)
+#### Nasdaq BX
+- [BX BBO](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/BX_BBO_Cloud.pdf)
+- [BX Last Sale](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/BLS_Cloud.pdf)
+#### Nasdaq PSX
+- [PSX BBO](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/PSX_BBO_Cloud.pdf)
+- [PSX Last Sale](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/PLS_Cloud.pdf)
+#### Nasdaq Canada
+- [Nasdaq Canada Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Nasdaq-Basic-Canada-Cloud-Specification.pdf)
+### Indexes & ETPs
+- [Global Index Data Service](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GIDS_Cloud.pdf)
+### Options
+#### Nasdaq U.S. Derivatives
+- [Nasdaq Smart Options](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NCDSSmartOptions.pdf)
+### Mutual Funds
+- [Nasdaq Fund Network](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NFNDS_NCDS.pdf)
+### News
+- [Financial News](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/MTNewswires-cloud.pdf)
 
-### Items To Note
+# Items To Note
 
 * Connecting to the API requires credentials, which are provided by the Nasdaq Data Operations team during an on-boarding process
 * This sample code only connects to one topic (NLSCTA); during on-boarding process, you will receive a topic list that you're entitled to.
-* See https://github.com/Nasdaq/CloudDataService for our officially support Java-based SDK.
+* See https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java for our officially support Java-based SDK.
 
 
 # Table of Contents
@@ -19,19 +43,19 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 The SDK currently supports Python 3.9 and above
 
 ### Get the SDK
-The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​
-- Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​.git```
-- Move into the directory ```cd ncds-python-sample-consumer```
-- Install the library and its dependencies from local source with ```pip install .```
+The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
+- Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python.git```
+- Move into the directory ```cd NasdaqCloudDataService-SDK-Python```
+- Install the library and its dependencies from local source with ```pip install -e .```
 
 Optional: to use the Jupyter notebook provided, 
-- Download Jupyter notebook using pip ```pip install notebook``` 
+- Download Jupyter notebook using either pip ```pip3 install notebook``` or conda ```conda install -c conda-forge notebook```
 - To run the notebook, use the command ```jupyter notebook``` and the Notebook Dashboard will open in your browser
 - Select the file ```python_sdk_examples.ipynb```
 
 ### Stream configuration
 
-  Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
+Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
 
   Required kafka configuration
 
@@ -43,13 +67,12 @@ Optional: to use the Jupyter notebook provided,
 
 ### Client Authentication configuration
 
-Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding. 
-
+Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding.
 
 ```properties
-oauth.token.endpoint.uri: https://{auth_endpoint_url}/auth/realms/demo/protocol/openid-connect/token
-oauth.client.id: client
-oauth.client.secret: client-secret
+oauth.token.endpoint.uri: "https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token"
+oauth.client.id: "client_id"
+oauth.client.secret: "client_secret"
 ```
 
 ### Create NCDS Session Client
@@ -264,7 +287,7 @@ while True:
         print(f"No Records Found for the Topic: {topic}")
               
     for message in messages:
-        print(f"value :" + message.value())
+        print(f"value :" + str(message.value()))
 ```
 
 Example output:
