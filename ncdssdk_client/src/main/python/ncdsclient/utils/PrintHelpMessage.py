@@ -5,7 +5,6 @@ def print_help_message():
           "        * METRICS - Display the Metrics for the topic\n" +
           "        * TOPICS - List of streams available on Nasdaq Cloud DataService\n" +
           "        * GETMSG - Get one example message for the given message name\n" +
-          "        * INSTALLCERTS - Install certificate to keystore\n" +
           "        * CONTSTREAM   - Retrieve continuous stream  \n" +
           "        * FILTERSTREAM  - Retrieve continuous stream filtered by symbols and/or msgtypes \n" +
           "        * HELP - help \n" +
@@ -16,6 +15,5 @@ def print_help_message():
           "-kafkaprops -- Provide Kafka Properties File path   --- For using different set of Kafka Properties \n" +
           "-n -- Provide number of messages to retrieve        --- REQUIRED for TOP \n" +
           "-msgName -- Provide name of message based on schema --- REQUIRED for GETMSG \n" +
-          "-path -- Provide the path for key store             --- REQUIRED for INSTALLCERTS \n" +
           "-timestamp -- Provide timestamp in milliseconds     --- OPTIONAL for TOP, CONTSTREAM and FILTERSTREAM\n"
           )

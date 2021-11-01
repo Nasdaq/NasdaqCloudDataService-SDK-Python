@@ -41,13 +41,6 @@ class ValidateInput:
                 print_help_message()
                 sys.exit()
 
-        elif self.test_option == "INSTALLCERTS":
-            if not self.certificate_path:
-                print(
-                    "You must provide -path (Directory path) for getting example message")
-                print_help_message()
-                sys.exit()
-
         elif self.test_option == "CONTSTREAM":
             if not self.topic:
                 print("You must provide -topic")

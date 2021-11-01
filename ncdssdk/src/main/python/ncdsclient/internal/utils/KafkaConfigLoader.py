@@ -31,7 +31,6 @@ class KafkaConfigLoader:
             p["security.protocol"] = "SASL_SSL"
             p["sasl.mechanism"] = "OAUTHBEARER"
             p["ssl.endpoint.identification.algorithm"] = "https"
-            p["enable.ssl.certificate.verification"] = False
 
         return p
 
