@@ -6,7 +6,7 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 ### Equities
 #### The Nasdaq Stock Market
 - [Nasdaq Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NasdaqBasic-Cloud.pdf)
-- [Nasdaq Last Sale+](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NLSPlus-cloud.pdf) 
+- [Nasdaq Last Sale+](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NLSPlus-cloud.pdf)
 - [Nasdaq TotalView](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Totalview-ITCH-cloud.pdf)
 - [Nasdaq Consolidated Quotes and Trades](https://github.com/Nasdaq/CloudDataService/raw/master/specs/CQT-cloud.pdf)
 #### Nasdaq BX
@@ -21,13 +21,11 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 - [Global Index Data Service](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GIDS_Cloud.pdf)
 ### Options
 #### Nasdaq U.S. Derivatives
-- [Nasdaq Smart Options](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NCDSSmartOptions.pdf) 
+- [Nasdaq Smart Options](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NCDSSmartOptions.pdf)
 ### Mutual Funds
-- [Nasdaq Fund Network](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NFNDS_NCDS.pdf) 
+- [Nasdaq Fund Network](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NFNDS_NCDS.pdf)
 ### News
-- [Financial News](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/MTNewswires-cloud.pdf)  
-
-
+- [Financial News](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/MTNewswires-cloud.pdf)
 
 # Items To Note
 
@@ -45,7 +43,7 @@ Nasdaq Cloud Data Service (NCDS) provides a modern and efficient method of deliv
 The SDK currently supports Python 3.9 and above
 
 ### Get the SDK
-The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python 
+The source code is currently hosted on GitHub at: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
 - Clone the repository: ```git clone https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python.git```
 - Move into the directory ```cd NasdaqCloudDataService-SDK-Python```
 - Install the library and its dependencies from local source with ```pip install -e .```
@@ -55,36 +53,54 @@ Optional: to use the Jupyter notebook provided,
 - To run the notebook, use the command ```jupyter notebook``` and the Notebook Dashboard will open in your browser
 - Select the file ```python_sdk_examples.ipynb```
 
-### Retrieving certificates
-
-Run `ncdssdk_client/src/main/python/ncdsclient/NCDSSession.py` with arguments, which takes the path where the certificate should be installed.
-
-For example:
-```python3.9 ncdssdk_client/src/main/python/ncdsclient/NCDSSession.py -opt INSTALLCERTS -path /my/trusted/store/ncdsinstallcerts```
-
 ### Stream configuration
 
-  Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
+Replace example stream properties in the file **kafka-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/kafka-config.json) with provided values during on-boarding.
 
-  **Note**: Ensure that the full path to the ca.crt file is provided. If the certificate was installed in the directory 
-  `/my/trusted/store/ncdsinstallcerts`, then the full path would be `/my/trusted/store/ncdsinstallcerts/ca.crt`
+  Required kafka configuration
 
 ```properties
-"bootstrap.servers": "{streams_endpoint_url}:9094"
-"ssl.ca.location": "/path/to/dir/ca.crt"
+"bootstrap.servers": {streams_endpoint_url}:9094
 ```
 
   For optional consumer configurations see: https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md
 
 ### Client Authentication configuration
 
-Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding. 
-
+Replace example client authentication properties in the file **client-authentication-config.json** (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk_client/src/main/python/resources/client-authentication-config.json) with valid credentials provided during on-boarding.
 
 ```properties
 oauth.token.endpoint.uri: "https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token"
 oauth.client.id: "client_id"
 oauth.client.secret: "client_secret"
+```
+
+### Logging Configuration
+
+To enable debug logging, edit the file (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk/src/main/resources/logging.json)
+and change the logging levels in whichever handler you would like output to go to. 
+
+For example, to enable debug logging to a file:
+```json
+"file_handler": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "DEBUG",
+      "formatter": "simple",
+      "filename": "logging.log",
+      "maxBytes": 10485760,
+      "backupCount": 20,
+      "encoding": "utf8"
+    }
+  },
+
+  "loggers": {
+    "": {
+      "level": "DEBUG",
+      "handlers": ["console", "file_handler"],
+      "propogate": false
+    }
+  }
+}
 ```
 
 ### Create NCDS Session Client
@@ -97,7 +113,6 @@ oauth.client.secret: "client_secret"
   "        * METRICS - Display the Metrics for the topic\n" +
   "        * TOPICS - List of streams available on Nasdaq Cloud DataService\n" +
   "        * GETMSG - Get one example message for the given message name\n" +
-  "        * INSTALLCERTS - Install certificate to keystore\n" +
   "        * CONTSTREAM   - Retrieve continuous stream  \n" +
   "        * FILTERSTREAM  - Retrieve continuous stream filtered by symbols and/or msgtypes \n" +
   "        * HELP - help \n" +
@@ -108,7 +123,6 @@ oauth.client.secret: "client_secret"
 "-kafkaprops -- Provide Kafka Properties File path   --- For using different set of Kafka Properties \n" +
 "-n -- Provide number of messages to retrieve        --- REQUIRED for TOP \n" +
 "-msgName -- Provide name of message based on schema --- REQUIRED for GETMSG \n" +
-"-path -- Provide the path for key store             --- REQUIRED for INSTALLCERTS \n" +
 "-timestamp -- Provide timestamp in milliseconds     --- OPTIONAL for TOP, CONTSTREAM and FILTERSTREAM\n"
 ```
 
@@ -138,7 +152,6 @@ security_cfg = {
 }
 kafka_cfg = {
     "bootstrap.servers": "{streams_endpoint_url}:9094",
-    "ssl.ca.location": "ca.crt",
     "auto.offset.reset": "earliest"
 }
 ```
