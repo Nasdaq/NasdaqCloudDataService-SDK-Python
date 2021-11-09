@@ -104,7 +104,6 @@ class NCDSClient:
         self.logger.debug("kafka_consumer is now trying to consume")
         records = kafka_consumer.consume(
             self.consumer_props[ConsumerConfig.NUM_MESSAGES], self.consumer_props[ConsumerConfig.TIMEOUT])
-        self.logger.debug(f"records: {records}")
         return records
 
     def get_sample_messages(self, topic_name, message_name, all_messages):

@@ -75,6 +75,34 @@ oauth.client.id: "client_id"
 oauth.client.secret: "client_secret"
 ```
 
+### Logging Configuration
+
+To enable debug logging, edit the file (https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/blob/master/ncdssdk/src/main/resources/logging.json)
+and change the logging levels in whichever handler you would like output to go to. 
+
+For example, to enable debug logging to a file:
+```json
+"file_handler": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "DEBUG",
+      "formatter": "simple",
+      "filename": "logging.log",
+      "maxBytes": 10485760,
+      "backupCount": 20,
+      "encoding": "utf8"
+    }
+  },
+
+  "loggers": {
+    "": {
+      "level": "DEBUG",
+      "handlers": ["console", "file_handler"],
+      "propogate": false
+    }
+  }
+}
+```
+
 ### Create NCDS Session Client
 
   How to run:
