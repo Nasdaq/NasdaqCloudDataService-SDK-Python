@@ -103,6 +103,16 @@ For example, to enable debug logging to a file:
 }
 ```
 
+Next, add a debug option to your kafka configurations:
+```python
+kafka_cfg = {
+    "bootstrap.servers": "{streams_endpoint_url}:9094",
+    "auto.offset.reset": "earliest",
+    "debug": "all"
+}
+```
+
+
 ### Create NCDS Session Client
 
   How to run:
