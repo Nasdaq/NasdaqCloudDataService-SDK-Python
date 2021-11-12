@@ -132,7 +132,7 @@ class NasdaqKafkaAvroConsumer():
         """
         if 'auto.offset.reset' not in self.kafka_props:
             self.kafka_props[config.AUTO_OFFSET_RESET_CONFIG] = "earliest"
-        if 'group_id' not in self.kafka_props:
+        if 'group.id' not in self.kafka_props:
             self.kafka_props[config.GROUP_ID_CONFIG] = f'{self.client_ID}_{stream_name}_{datetime.datetime.today().day}'
         return KafkaAvroConsumer(self.kafka_props, avro_schema)
 
