@@ -27,6 +27,33 @@
   "version" : "1"
 }, {
   "type" : "record",
+  "name" : "SeqAdjClosingPriceLong",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "adjClosingPrice",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
   "name" : "SeqDirectoryMessage",
   "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
   "fields" : [ {
@@ -111,17 +138,20 @@
     "name" : "securityClass",
     "type" : "string"
   }, {
-    "name" : "highPrice",
+    "name" : "consHigh",
     "type" : "int"
   }, {
-    "name" : "lowPrice",
+    "name" : "consLow",
     "type" : "int"
   }, {
-    "name" : "NOCP",
+    "name" : "consClose",
     "type" : "int"
   }, {
     "name" : "cosolidatedVolume",
     "type" : "long"
+  }, {
+    "name" : "consOpen",
+    "type" : "int"
   } ],
   "version" : "1"
 }, {
@@ -147,25 +177,70 @@
     "name" : "securityClass",
     "type" : "string"
   }, {
-    "name" : "highPrice",
+    "name" : "consHigh",
     "type" : "int"
   }, {
-    "name" : "highPriceNAV",
+    "name" : "consHighNAV",
     "type" : "int"
   }, {
-    "name" : "lowPrice",
+    "name" : "consLow",
     "type" : "int"
   }, {
-    "name" : "lowPriceNAV",
+    "name" : "consLowNAV",
     "type" : "int"
   }, {
-    "name" : "NOCP",
+    "name" : "consClose",
     "type" : "int"
   }, {
-    "name" : "NOCPNAV",
+    "name" : "consCloseNAV",
     "type" : "int"
   }, {
     "name" : "cosolidatedVolume",
+    "type" : "long"
+  }, {
+    "name" : "consOpen",
+    "type" : "int"
+  }, {
+    "name" : "consOpenNAV",
+    "type" : "int"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqEndOfDayTradeSummaryLong",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "consHigh",
+    "type" : "long"
+  }, {
+    "name" : "consLow",
+    "type" : "long"
+  }, {
+    "name" : "consClose",
+    "type" : "long"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  }, {
+    "name" : "consOpen",
     "type" : "long"
   } ],
   "version" : "1"
@@ -438,6 +513,48 @@
   "version" : "1"
 }, {
   "type" : "record",
+  "name" : "SeqTradeCancelLong",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "long"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
   "name" : "SeqTradeCorrection",
   "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
   "fields" : [ {
@@ -552,6 +669,60 @@
   "version" : "1"
 }, {
   "type" : "record",
+  "name" : "SeqTradeCorrectionLong",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "origControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "origPrice",
+    "type" : "long"
+  }, {
+    "name" : "origSize",
+    "type" : "int"
+  }, {
+    "name" : "origSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "correctedControlNumber",
+    "type" : "string"
+  }, {
+    "name" : "correctedPrice",
+    "type" : "long"
+  }, {
+    "name" : "correctedSize",
+    "type" : "int"
+  }, {
+    "name" : "correctedSaleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
   "name" : "SeqTradeReportETMFMessage",
   "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
   "fields" : [ {
@@ -586,6 +757,48 @@
     "type" : "int"
   }, {
     "name" : "navPremium",
+    "type" : "int"
+  }, {
+    "name" : "saleCondition",
+    "type" : "string"
+  }, {
+    "name" : "cosolidatedVolume",
+    "type" : "long"
+  } ],
+  "version" : "1"
+}, {
+  "type" : "record",
+  "name" : "SeqTradeReportLongMessage",
+  "namespace" : "com.nasdaq.equities.trades.applications.nls.messaging.binary21",
+  "fields" : [ {
+    "name" : "SoupPartition",
+    "type" : "int"
+  }, {
+    "name" : "SoupSequence",
+    "type" : "long"
+  }, {
+    "name" : "trackingID",
+    "type" : "long"
+  }, {
+    "name" : "msgType",
+    "type" : "string"
+  }, {
+    "name" : "marketCenter",
+    "type" : "string"
+  }, {
+    "name" : "symbol",
+    "type" : "string"
+  }, {
+    "name" : "securityClass",
+    "type" : "string"
+  }, {
+    "name" : "controlNumber",
+    "type" : "string"
+  }, {
+    "name" : "price",
+    "type" : "long"
+  }, {
+    "name" : "size",
     "type" : "int"
   }, {
     "name" : "saleCondition",
