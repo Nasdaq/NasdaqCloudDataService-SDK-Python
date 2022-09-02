@@ -1,0 +1,474 @@
+[
+  {
+    "type": "record",
+    "name": "TradeMessage",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "double"
+      },
+      {
+        "name": "quantity",
+        "type": "long"
+      },
+      {
+        "name": "canceled_indicator",
+        "type": "boolean"
+      },
+      {
+        "name": "correction_indicator",
+        "type": "boolean"
+      },
+      {
+        "name": "dott",
+        "type": "string"
+      },
+      {
+        "name": "listing_venue",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "sub_market_center",
+        "type": "string"
+      },
+      {
+        "name": "msn",
+        "type": "long"
+      },
+      {
+        "name": "omsn",
+        "type": "long"
+      },
+      {
+        "name": "sales_conditions",
+        "type": "string"
+      },
+      {
+        "name": "trade_date",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "QuoteMessage",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "sipfeed",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "bid_price",
+        "type": "double"
+      },
+      {
+        "name": "bid_quantity",
+        "type": "int"
+      },
+      {
+        "name": "ask_price",
+        "type": "double"
+      },
+      {
+        "name": "ask_quantity",
+        "type": "int"
+      },
+      {
+        "name": "quote_conditions",
+        "type": "string"
+      },
+      {
+        "name": "start_time",
+        "type": "string"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "SystemEvent",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "event_code",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "IssueSymbol",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "security_name",
+        "type": "string"
+      },
+      {
+        "name": "market_tier",
+        "type": "string"
+      },
+      {
+        "name": "test_symbol",
+        "type": "boolean"
+      },
+      {
+        "name": "round_lot_size",
+        "type": "int"
+      },
+      {
+        "name": "financial_status_indicator",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "TradingAction",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "source_market_center",
+        "type": "string"
+      },
+      {
+        "name": "action_time",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "sipfeed",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      },
+      {
+        "name": "action",
+        "type": "int"
+      },
+      {
+        "name": "reason",
+        "type": "int"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "MarketCenterTradingAction",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "source_market_center",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "action_time",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "sipfeed",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      },
+      {
+        "name": "action",
+        "type": "int"
+      },
+      {
+        "name": "reason",
+        "type": "int"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "RegSHORestrictionIndicator",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "source_market_center",
+        "type": "string"
+      },
+      {
+        "name": "action_time",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "sipfeed",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      },
+      {
+        "name": "action",
+        "type": "int"
+      },
+      {
+        "name": "reason",
+        "type": "int"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "LimitUpLimitDown",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "luld_price_band_indicator",
+        "type": "int"
+      },
+      {
+        "name": "luld_time",
+        "type": "string"
+      },
+      {
+        "name": "limit_down_price",
+        "type": "double"
+      },
+      {
+        "name": "limit_up_price",
+        "type": "double"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "MarketWideCircuitBreaker",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "mwcb_status",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "MarketWideCircuitBreakerDeclineLevel",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "market_center",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "mwcb_level_1",
+        "type": "double"
+      },
+      {
+        "name": "mwcb_level_2",
+        "type": "double"
+      },
+      {
+        "name": "mwcb_level_3",
+        "type": "double"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      }
+    ],
+    "version": "1"
+  },
+  {
+    "type": "record",
+    "name": "NBBOQuoteMessage",
+    "namespace": "com.nasdaq.cqt",
+    "fields": [
+      {
+        "name": "msg_type",
+        "type": "string"
+      },
+      {
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "name": "sipfeed",
+        "type": "string"
+      },
+      {
+        "name": "upstream_seq",
+        "type": "long"
+      },
+      {
+        "name": "bid_market_center",
+        "type": "string"
+      },
+      {
+        "name": "bid_price",
+        "type": "double"
+      },
+      {
+        "name": "bid_quantity",
+        "type": "int"
+      },
+      {
+        "name": "ask_market_center",
+        "type": "string"
+      },
+      {
+        "name": "ask_price",
+        "type": "double"
+      },
+      {
+        "name": "ask_quantity",
+        "type": "int"
+      },
+      {
+        "name": "quote_conditions",
+        "type": "string"
+      },
+      {
+        "name": "start_time",
+        "type": "string"
+      }
+    ],
+    "version": "1"
+  } 
+]
