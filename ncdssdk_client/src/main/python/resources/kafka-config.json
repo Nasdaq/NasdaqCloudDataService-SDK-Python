@@ -1,6 +1,6 @@
 {
     "bootstrap.servers": "bootstrap-server-endpoint",
-    "timeout": 5000,
+    "timeout": 5,
     "retry.backoff.ms": 500,
     "fetch.wait.max.ms": 30,
     "fetch.min.bytes": 131072,
