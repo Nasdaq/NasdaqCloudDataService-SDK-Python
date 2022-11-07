@@ -2,7 +2,7 @@
     "bootstrap.servers": "bootstrap-server-endpoint",
     "request.timeout.ms": 5000,
     "retry.backoff.ms": 500,
-    "fetch.max.wait.ms": 30,
+    "fetch.wait.max.ms": 30,
     "fetch.min.bytes": 131072,
     "fetch.max.bytes": 8388608,
     "max.partition.fetch.bytes": 8388608,
@@ -13,5 +13,5 @@
     "heartbeat.interval.ms": 3000,
     "auto.offset.reset": "latest",
     "max.poll.interval.ms": 30000,
-    "max.poll.records": 1000000
+    "max.poll.records": 50000
 }
