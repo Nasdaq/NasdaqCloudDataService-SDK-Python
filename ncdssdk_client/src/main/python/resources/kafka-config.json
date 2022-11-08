@@ -1,6 +1,5 @@
 {
     "bootstrap.servers": "bootstrap-server-endpoint",
-    "timeout": 5,
     "retry.backoff.ms": 500,
     "fetch.wait.max.ms": 30,
     "fetch.min.bytes": 131072,
@@ -12,6 +11,5 @@
     "session.timeout.ms": 10000,
     "heartbeat.interval.ms": 3000,
     "auto.offset.reset": "latest",
-    "max.poll.interval.ms": 30000,
-    "num_messages": 50000
+    "max.poll.interval.ms": 30000
 }
