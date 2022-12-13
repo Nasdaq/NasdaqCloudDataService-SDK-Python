@@ -6,10 +6,10 @@ from ncdssdk.src.main.python.ncdsclient.internal.KafkaAvroConsumer import KafkaA
 from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
 from ncdssdk.src.main.python.ncdsclient.internal.utils import IsItPyTest, SeekToMidnight
 from confluent_kafka import TopicPartition, OFFSET_INVALID, OFFSET_END, OFFSET_BEGINNING
-import ncdssdk.src.main.python.ncdsclient.internal.utils.ConsumerConfig as config
 from datetime import datetime
 from ncdssdk.src.main.python.ncdsclient.internal.utils.Oauth import Oauth
 import datetime
+from pprint import pformat
 
 
 class NasdaqKafkaAvroConsumer():
@@ -37,17 +37,17 @@ class NasdaqKafkaAvroConsumer():
 
         self.logger = logging.getLogger(__name__)
 
-        kafka_config_loader = KafkaConfigLoader()
+        self.kafka_config_loader = KafkaConfigLoader()
         auth_config_loader = AuthenticationConfigLoader()
         if self.kafka_cfg is None:
             if IsItPyTest.is_py_test():
-                pytest_kafka_cfg = kafka_config_loader.load_test_config()
+                pytest_kafka_cfg = self.kafka_config_loader.load_test_config()
                 self.kafka_props = pytest_kafka_cfg
             else:
                 raise Exception("Kafka Configuration not defined")
         else:
             self.kafka_props = self.kafka_cfg
-            kafka_config_loader.validate_and_add_specific_properties(
+            self.kafka_config_loader.validate_and_add_specific_properties(
                 self.kafka_props)
 
         if self.security_cfg is None:
@@ -61,6 +61,8 @@ class NasdaqKafkaAvroConsumer():
         self.read_schema_topic.set_security_props(self.security_props)
         self.read_schema_topic.set_kafka_props(self.kafka_props)
         self.client_ID = auth_config_loader.get_client_id(self.security_props)
+        self.logger.info("Consumer Config: ")
+        self.logger.info(pformat(self.kafka_cfg))
 
     def get_kafka_consumer(self, stream_name, timestamp=None):
         """
@@ -87,8 +89,7 @@ class NasdaqKafkaAvroConsumer():
         if timestamp is None:
             self.logger.debug("Timestamp is none")
 
-            auto_offset_cfg = self.kafka_props.get(
-                config.AUTO_OFFSET_RESET_CONFIG)
+            auto_offset_cfg = self.kafka_props.get(self.kafka_config_loader.AUTO_OFFSET_RESET_CONFIG)
             if auto_offset_cfg == "earliest" or auto_offset_cfg == "smallest" or auto_offset_cfg == "beginning":
                 self.logger.debug(
                     f"Auto offset reset config set to: {auto_offset_cfg}")
@@ -104,7 +105,7 @@ class NasdaqKafkaAvroConsumer():
                 self.logger.debug(
                     "offset: " + str(topic_partition.offset) + ", timestamp: " + str(timestamp))
                 offsets_for_times = kafka_consumer.offsets_for_times(
-                    [topic_partition], timeout=5)
+                    [topic_partition], self.kafka_cfg.TIMEOUT)
             except Exception as e:
                 self.logger.exception(e)
                 sys.exit(0)
@@ -130,9 +131,8 @@ class NasdaqKafkaAvroConsumer():
         Returns:
             a :class:`.KafkaAvroConsumer` instance with a key and value deserializer set through the avro_schema parameter
         """
-        if 'auto.offset.reset' not in self.kafka_props:
-            self.kafka_props[config.AUTO_OFFSET_RESET_CONFIG] = "earliest"
-        self.kafka_props[config.GROUP_ID_CONFIG] = f'{self.client_ID}_{stream_name}_{datetime.datetime.today().day}'
+        if 'group.id' not in self.kafka_props:
+            self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{self.client_ID}_{stream_name}_{datetime.datetime.today().day}'
         return KafkaAvroConsumer(self.kafka_props, avro_schema)
 
     def get_schema_for_topic(self, topic):
