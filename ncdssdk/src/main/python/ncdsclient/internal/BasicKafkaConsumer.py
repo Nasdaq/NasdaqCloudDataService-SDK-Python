@@ -5,6 +5,8 @@ from confluent_kafka.serialization import (SerializationContext,
                                            MessageField)
 import logging
 
+from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
+
 
 class BasicKafkaConsumer(DeserializingConsumer):
     """
@@ -20,8 +22,12 @@ class BasicKafkaConsumer(DeserializingConsumer):
     def __init__(self, config, key_deserializer, value_deserializer):
         config["key.deserializer"] = key_deserializer
         config["value.deserializer"] = value_deserializer.decode
+        kafka_config = config.copy()
+        del kafka_config[KafkaConfigLoader().TIMEOUT]
+        del kafka_config[KafkaConfigLoader().NUM_MESSAGES]
+
         self.logger = logging.getLogger(__name__)
-        super(BasicKafkaConsumer, self).__init__(config)
+        super(BasicKafkaConsumer, self).__init__(kafka_config)
 
     def ensure_assignment(self):
         """

@@ -13,6 +13,10 @@ class KafkaConfigLoader:
 
     def __init__(self):
         self.BOOTSTRAP_SERVERS = "bootstrap.servers"
+        self.AUTO_OFFSET_RESET_CONFIG = 'auto.offset.reset'
+        self.GROUP_ID_CONFIG = 'group.id'
+        self.TIMEOUT = 'timeout'
+        self.NUM_MESSAGES = 'num_messages'
         self.logger = logging.getLogger(__name__)
 
     @staticmethod
@@ -38,5 +42,12 @@ class KafkaConfigLoader:
         if not p[self.BOOTSTRAP_SERVERS]:
             raise Exception(
                 "bootstrap.servers Properties is not set in the Kafka Configuration")
+        if not p[self.AUTO_OFFSET_RESET_CONFIG]:
+            self.AUTO_OFFSET_RESET_CONFIG = "earliest"
+        if self.TIMEOUT not in p:
+            p[self.TIMEOUT] = 10
+        if self.NUM_MESSAGES not in p:
+            p[self.NUM_MESSAGES] = 500
+
         self.nasdaq_specific_config(p)
         return p

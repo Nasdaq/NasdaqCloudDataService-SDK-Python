@@ -9,7 +9,6 @@ import ncdssdk.src.main.resources as sysresources
 import ncdssdk.src.main.resources.schemas as schemas
 from ncdssdk.src.main.python.ncdsclient.internal.KafkaAvroConsumer import KafkaAvroConsumer
 from confluent_kafka import TopicPartition
-import ncdssdk.src.main.python.ncdsclient.internal.utils.ConsumerConfig as config
 from confluent_kafka import OFFSET_BEGINNING
 
 
@@ -29,22 +28,18 @@ class ReadSchemaTopic:
         self.security_props = None
         self.kafka_props = {}
         self.logger = logging.getLogger(__name__)
-
-        with resources.open_text(sysresources, "consumer-properties.json") as f:
-            self.consumer_props = json.load(f)
-        f.close()
-
-        self.num_messages = self.consumer_props[config.NUM_MESSAGES]
-        self.timeout = self.consumer_props[config.TIMEOUT]
+        self.kafka_config_loader = KafkaConfigLoader()
 
     def read_schema(self, topic):
         auth_config_loader = AuthenticationConfigLoader()
         schema_consumer = self.get_consumer(
             "Control-" + auth_config_loader.get_client_id(self.security_props))
         latest_record = None
+        num_messages = self.kafka_props[self.kafka_config_loader.NUM_MESSAGES]
+        timeout = self.kafka_props[self.kafka_config_loader.TIMEOUT]
         while True:
             schema_messages = schema_consumer.consume(
-                self.num_messages, self.timeout)
+                num_messages, timeout)
             if not schema_messages:
                 break
             for message in reversed(schema_messages):
@@ -110,8 +105,8 @@ class ReadSchemaTopic:
         if IsItPyTest.is_py_test():
             self.kafka_props = KafkaConfigLoader.load_test_config()
 
-        self.kafka_props[config.AUTO_OFFSET_RESET_CONFIG] = 'earliest'
-        self.kafka_props[config.GROUP_ID_CONFIG] = f'{client_id}1'
+        self.kafka_props[self.kafka_config_loader.AUTO_OFFSET_RESET_CONFIG] = 'earliest'
+        self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{client_id}1'
 
         kafka_avro_consumer = KafkaAvroConsumer(
             self.kafka_props, ctrl_msg_schema)

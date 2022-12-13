@@ -3,12 +3,12 @@ import click
 import sys
 import logging
 from ncdssdk.src.main.python.ncdsclient.NCDSClient import NCDSClient
+from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
 from ncdssdk_client.src.main.python.ncdsclient.utils.ValidateInput import ValidateInput
 from confluent_kafka import KafkaException
 from importlib import resources
 import ncdssdk_client.src.main.python.resources as configresources
 import ncdssdk.src.main.resources as sysresources
-from ncdssdk.src.main.python.ncdsclient.internal.utils import ConsumerConfig
 import logging
 
 
@@ -35,6 +35,7 @@ class NCDSSession:
     def main(self):
         self.security_cfg = load_auth_properties(self.auth_props_file)
         self.kafka_cfg = load_kafka_config(self.kafka_props_file)
+        self.kafka_config_loader = KafkaConfigLoader()
 
         cmd_to_validate = ValidateInput(self.cmd)
         cmd_to_validate.validate_user_input()
@@ -118,12 +119,11 @@ class NCDSSession:
 
         try:
             while True:
-                message = consumer.poll(sys.maxsize)
+                message = consumer.poll(self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES])
                 if message is None:
                     print(f"No Records Found for the Topic: {self.topic}")
                 else:
                     print(f"value :" + str(message.value()))
-                    consumer.commit(message=message, asynchronous=True)
 
         except KafkaException as e:
             logging.exception(f"Error in cont stream {e.args[0].str()}")
@@ -144,14 +144,10 @@ class NCDSSession:
         consumer = ncds_client.ncds_kafka_consumer(
             self.topic) if not self.timestamp else ncds_client.ncds_kafka_consumer(self.topic, self.timestamp)
 
-        with resources.open_text(sysresources, "consumer-properties.json") as f:
-            consumer_props = json.load(f)
-        f.close()
-
         try:
             while True:
                 messages = consumer.consume(
-                    consumer_props[ConsumerConfig.NUM_MESSAGES], consumer_props[ConsumerConfig.TIMEOUT])
+                    self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES], self.kafka_cfg[self.kafka_config_loader.TIMEOUT])
                 self.logger.debug(
                     f"number of messages consumed: {len(messages)}")
                 if len(messages) == 0:
@@ -172,8 +168,6 @@ class NCDSSession:
 
                         except KeyError:
                             pass
-
-                        consumer.commit(message=message, asynchronous=True)
         except Exception as e:
             logging.exception(f"Error in filter stream: {e}")
 

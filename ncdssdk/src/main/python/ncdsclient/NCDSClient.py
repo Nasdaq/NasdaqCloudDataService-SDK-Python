@@ -1,13 +1,10 @@
 import logging
-from importlib import resources
-from ncdssdk.src.main.python.ncdsclient.internal.utils import ConsumerConfig
 from ncdssdk.src.main.python.ncdsclient.internal.utils.AuthenticationConfigLoader import AuthenticationConfigLoader
 from ncdssdk.src.main.python.ncdsclient.consumer.NasdaqKafkaAvroConsumer import NasdaqKafkaAvroConsumer
 from ncdssdk.src.main.python.ncdsclient.internal.utils import IsItPyTest
-import ncdssdk.src.main.resources as sysresources
-import json
 from confluent_kafka import OFFSET_END
 from ncdssdk.src.main.python.ncdsclient.internal.utils import LoggingConfig
+from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
 
 
 class NCDSClient:
@@ -27,13 +24,11 @@ class NCDSClient:
         self.nasdaq_kafka_avro_consumer = None
         LoggingConfig.create_logger()
         self.logger = logging.getLogger(__name__)
+        self.kafka_cfg = kafka_cfg
+        self.kafka_config_loader = KafkaConfigLoader()
 
         if kafka_cfg:
             kafka_cfg['logger'] = logging.getLogger(__name__)
-
-        with resources.open_text(sysresources, "consumer-properties.json") as f:
-            self.consumer_props = json.load(f)
-        f.close()
 
         try:
             auth_config_loader = AuthenticationConfigLoader()
@@ -103,7 +98,7 @@ class NCDSClient:
         kafka_consumer = self.ncds_kafka_consumer(topic_name, timestamp)
         self.logger.debug("kafka_consumer is now trying to consume")
         records = kafka_consumer.consume(
-            self.consumer_props[ConsumerConfig.NUM_MESSAGES], self.consumer_props[ConsumerConfig.TIMEOUT])
+            self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES], self.kafka_cfg[self.kafka_config_loader.TIMEOUT])
         return records
 
     def get_sample_messages(self, topic_name, message_name, all_messages):
@@ -127,7 +122,7 @@ class NCDSClient:
 
             while not found:
                 messages = kafka_consumer.consume(
-                    self.consumer_props[ConsumerConfig.NUM_MESSAGES], self.consumer_props[ConsumerConfig.TIMEOUT])
+                    self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES], self.kafka_cfg[self.kafka_config_loader.TIMEOUT])
                 if not messages or self.end_of_data(kafka_consumer):
                     print(
                         "--------------------------------END of Stream------------------")

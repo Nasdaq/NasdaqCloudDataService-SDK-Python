@@ -8,7 +8,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ncdssdk',
-    version='0.2.0',
+    version='0.4.0',
     description='A Python SDK for developing applications to access the NCDS API',
     long_description=long_description,
     long_description_content_type='text/markdown',
