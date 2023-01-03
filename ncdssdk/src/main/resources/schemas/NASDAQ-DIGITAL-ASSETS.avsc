@@ -1,0 +1,96 @@
+[
+   {
+      "type":"record",
+      "name":"OrderEvent",
+      "namespace":"com.amber.spot",
+      "fields":[
+         {
+            "name":"exchange",
+            "type": ["null", "string"],
+            "default": null
+         },
+         {
+            "name":"pair",
+            "type": ["null", "string"],
+            "default": null
+         },
+         {
+            "name":"timestamp",
+            "type": ["null", "long"],
+            "default": null
+         },
+         {
+            "name":"timestampNanoseconds",
+            "type": ["null", "long"],
+            "default": null
+         },
+         {
+            "name":"price",
+            "type": ["null", "double"],
+            "default": null
+         },
+         {
+            "name":"volume",
+            "type": ["null", "double"],
+            "default": null
+         },
+         {
+            "name":"isBid",
+            "type": ["null", "boolean"],
+            "default": null
+         },
+         {
+            "name":"sequence",
+            "type": ["null", "long"],
+            "default": null
+         }
+      ]
+   },
+   {
+      "type":"record",
+      "name":"Trade",
+      "namespace":"com.amber.spot",
+      "fields":[
+         {
+            "name":"exchange",
+            "type": ["null", "string"],
+            "default": null
+         },
+         {
+            "name":"pair",
+            "type": ["null", "string"],
+            "default": null
+         },
+         {
+            "name":"timestamp",
+            "type": ["null", "long"],
+            "default": null
+         },
+         {
+            "name":"timestampNanoseconds",
+            "type": ["null", "long"],
+            "default": null
+         },
+         {
+            "name":"tradeId",
+            "type": ["null", "long"],
+            "default": null
+         },
+         {
+            "name":"price",
+            "type": ["null", "double"],
+            "default": null
+         },
+         {
+            "name":"volume",
+            "type": ["null", "double"],
+            "default": null
+         },
+         {
+            "name":"isBid",
+            "type": ["null", "boolean"],
+            "default": null
+         }
+      ]
+   }
+]
