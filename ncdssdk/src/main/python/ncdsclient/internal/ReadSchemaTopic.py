@@ -111,7 +111,7 @@ class ReadSchemaTopic:
 
         kafka_avro_consumer.assign([topic_partition])
 
-        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 6)
+        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 6, self.kafka_props[self.kafka_config_loader.TIMEOUT])
 
     def internal_schema(self, topic):
         try:
