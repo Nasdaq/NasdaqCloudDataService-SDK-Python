@@ -102,7 +102,7 @@ class NCDSSession:
                 for i, record in enumerate(records):
                     if i >= numOfRecords:
                         break
-                    print("key: " + record.key() + "\n" +
+                    print("key: " + str(record.key()) + "\n" +
                           "value: " + str(record.value()))
         else:
             print("Access to topic is not granted")
