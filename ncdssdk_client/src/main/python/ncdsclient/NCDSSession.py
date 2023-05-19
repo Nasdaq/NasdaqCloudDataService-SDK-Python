@@ -113,7 +113,7 @@ class NCDSSession:
 
         try:
             while True:
-                message = consumer.poll(self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES])
+                message = consumer.poll(self.kafka_cfg[self.kafka_config_loader.TIMEOUT])
                 if message is None:
                     print(f"No Records Found for the Topic: {self.topic}")
                 else:
