@@ -37,6 +37,7 @@ class ReadSchemaTopic:
         latest_record = None
         num_messages = self.kafka_props[self.kafka_config_loader.NUM_MESSAGES]
         timeout = self.kafka_props[self.kafka_config_loader.TIMEOUT]
+        latest_record = None
         while True:
             schema_messages = schema_consumer.consume(
                 num_messages, timeout)
@@ -46,7 +47,6 @@ class ReadSchemaTopic:
                 try:
                     msg_val = message.value()
 
-                    latest_record = None
                     if "name" in msg_val and msg_val["name"] == topic:
                         latest_record = message
                     if latest_record and 'schema' in msg_val:
