@@ -37,7 +37,6 @@ class ReadSchemaTopic:
         latest_record = None
         num_messages = self.kafka_props[self.kafka_config_loader.NUM_MESSAGES]
         timeout = self.kafka_props[self.kafka_config_loader.TIMEOUT]
-        latest_record = None
         while True:
             schema_messages = schema_consumer.consume(
                 num_messages, timeout)
