@@ -22,6 +22,7 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 ### Options
 #### Nasdaq U.S. Derivatives
 - [Nasdaq Smart Options](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NCDSSmartOptions.pdf)
+- [Nasdaq Greeks and Vols](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GreeksandVols_Specification.pdf)
 ### Mutual Funds
 - [Nasdaq Fund Network](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NFNDS_NCDS.pdf)
 ### News
