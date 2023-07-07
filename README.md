@@ -17,6 +17,8 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [PSX Last Sale](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/PLS_Cloud.pdf)
 #### Nasdaq Canada
 - [Nasdaq Canada Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Nasdaq-Basic-Canada-Cloud-Specification.pdf)
+#### OTC Markets
+- [OTC Markets](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/OTCM-cloud.pdf)
 ### Indexes & ETPs
 - [Global Index Data Service](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GIDS_Cloud.pdf)
 ### Options
