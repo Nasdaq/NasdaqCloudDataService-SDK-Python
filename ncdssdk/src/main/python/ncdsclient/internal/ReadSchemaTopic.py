@@ -6,7 +6,6 @@ from ncdssdk.src.main.python.ncdsclient.internal.utils import IsItPyTest, SeekTo
 from ncdssdk.src.main.python.ncdsclient.internal.utils.AuthenticationConfigLoader import AuthenticationConfigLoader
 from ncdssdk.src.main.python.ncdsclient.internal.utils.KafkaConfigLoader import KafkaConfigLoader
 import ncdssdk.src.main.resources as sysresources
-import ncdssdk.src.main.resources.schemas as schemas
 from ncdssdk.src.main.python.ncdsclient.internal.KafkaAvroConsumer import KafkaAvroConsumer
 from confluent_kafka import TopicPartition
 from confluent_kafka import OFFSET_BEGINNING
@@ -62,10 +61,6 @@ class ReadSchemaTopic:
             message_schema = avro.schema.parse(latest_record_val['schema'])
         schema_consumer.close()
 
-        if not message_schema:
-            print("WARNING: Using the Old Schema! It might not be the latest schema.")
-            message_schema = self.internal_schema(topic)
-
         self.logger.debug("Returning message schema in read_schema")
 
         return message_schema
@@ -105,7 +100,7 @@ class ReadSchemaTopic:
             self.kafka_props = KafkaConfigLoader.load_test_config()
 
         self.kafka_props[self.kafka_config_loader.AUTO_OFFSET_RESET_CONFIG] = 'earliest'
-        self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{client_id}1'
+        self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = client_id
 
         kafka_avro_consumer = KafkaAvroConsumer(
             self.kafka_props, ctrl_msg_schema)
@@ -115,7 +110,7 @@ class ReadSchemaTopic:
 
         kafka_avro_consumer.assign([topic_partition])
 
-        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 7)
+        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 6, self.kafka_props[self.kafka_config_loader.TIMEOUT])
 
     def internal_schema(self, topic):
         try:

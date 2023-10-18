@@ -93,7 +93,7 @@ class NasdaqKafkaAvroConsumer():
             if auto_offset_cfg == "earliest" or auto_offset_cfg == "smallest" or auto_offset_cfg == "beginning":
                 self.logger.debug(
                     f"Auto offset reset config set to: {auto_offset_cfg}")
-                return SeekToMidnight.seek_to_midnight_at_past_day(kafka_consumer, topic_partition, 0)
+                return SeekToMidnight.seek_to_midnight_at_past_day(kafka_consumer, topic_partition, 0, self.kafka_props.get(self.kafka_config_loader.TIMEOUT))
 
             else:
                 return kafka_consumer
