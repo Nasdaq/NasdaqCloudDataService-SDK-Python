@@ -32,8 +32,7 @@ class ReadSchemaTopic:
 
     def read_schema(self, topic):
         auth_config_loader = AuthenticationConfigLoader()
-        schema_consumer = self.get_consumer(
-            "Control-" + auth_config_loader.get_client_id(self.security_props))
+        schema_consumer = self.get_consumer(auth_config_loader.get_client_id(self.security_props))
         latest_record = None
         num_messages = self.kafka_props[self.kafka_config_loader.NUM_MESSAGES]
         timeout = self.kafka_props[self.kafka_config_loader.TIMEOUT]
@@ -46,6 +45,7 @@ class ReadSchemaTopic:
                 try:
                     msg_val = message.value()
 
+                    latest_record = None
                     if "name" in msg_val and msg_val["name"] == topic:
                         latest_record = message
                     if latest_record and 'schema' in msg_val:
@@ -105,7 +105,7 @@ class ReadSchemaTopic:
             self.kafka_props = KafkaConfigLoader.load_test_config()
 
         self.kafka_props[self.kafka_config_loader.AUTO_OFFSET_RESET_CONFIG] = 'earliest'
-        self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{client_id}1'
+        self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{client_id}'
 
         kafka_avro_consumer = KafkaAvroConsumer(
             self.kafka_props, ctrl_msg_schema)
@@ -115,7 +115,7 @@ class ReadSchemaTopic:
 
         kafka_avro_consumer.assign([topic_partition])
 
-        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 7)
+        return SeekToMidnight.seek_to_midnight_at_past_day(kafka_avro_consumer, topic_partition, 6, self.kafka_props[self.kafka_config_loader.TIMEOUT])
 
     def internal_schema(self, topic):
         try:
