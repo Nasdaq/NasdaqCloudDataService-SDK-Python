@@ -31,7 +31,6 @@ class NCDSSession:
         self.logger = logging.getLogger(__name__)
 
         self.logger = logging.getLogger(__name__)
-        self.ncds_client = None
 
     def main(self):
         self.security_cfg = load_auth_properties(self.auth_props_file)
@@ -41,14 +40,16 @@ class NCDSSession:
         cmd_to_validate = ValidateInput(self.cmd)
         cmd_to_validate.validate_user_input()
 
+        ncds_client = None
+
         try:
-            self.ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
             if self.test_option == "TOP":
                 self.top_cmd()
 
             elif self.test_option == "SCHEMA":
+                ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
                 # Dump the Schema for the self.topic
-                schema = self.ncds_client.get_schema_for_topic(self.topic)
+                schema = ncds_client.get_schema_for_topic(self.topic)
                 print("Schema for the Topic:" + self.topic)
                 if schema:
                     print(schema)
@@ -56,11 +57,12 @@ class NCDSSession:
                     print(" Access to topic is not granted ")
 
             elif self.test_option == "GETMSG":
+                ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
                 print("Finding the message")
                 if "auto.offset.reset" in self.kafka_cfg and self.kafka_cfg["auto.offset.reset"] == "latest":
                     print("Need to get run GETMSG with 'earliest' offset")
                     sys.exit(0)
-                msg = self.ncds_client.get_sample_messages(
+                msg = ncds_client.get_sample_messages(
                     self.topic, self.message_name, False)
                 if msg is not None:
                     print(msg)
@@ -68,15 +70,17 @@ class NCDSSession:
                     print("Message Not Found ...")
 
             elif self.test_option == "GETALLMSGS":
+                ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
                 print("Finding the messages")
                 if "auto.offset.reset" in self.kafka_cfg and self.kafka_cfg["auto.offset.reset"] == "latest":
                     print("Need to run GETMSG with 'earliest' offset")
                     sys.exit(0)
-                self.ncds_client.get_sample_messages(
+                ncds_client.get_sample_messages(
                     self.topic, self.message_name, True)
 
             elif self.test_option == "TOPICS":
-                self.topics = self.ncds_client.list_topics_for_client()
+                ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
+                self.topics = ncds_client.list_topics_for_client()
                 print("List of streams available on Nasdaq Cloud Data Service:")
                 for self.topic in self.topics:
                     print(self.topic)
@@ -90,9 +94,10 @@ class NCDSSession:
             logging.exception(e)
 
     def top_cmd(self):
+        ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
         numOfRecords = max(10, min(int(self.num_top_messages), 999))
-        records = self.ncds_client.top_messages(
-            self.topic) if not self.timestamp else self.ncds_client.top_messages(self.topic, self.timestamp)
+        records = ncds_client.top_messages(
+            self.topic) if not self.timestamp else ncds_client.top_messages(self.topic, self.timestamp)
         print("Top " + str(numOfRecords) +
               " Records for the Topic: " + self.topic)
         if records:
@@ -108,12 +113,13 @@ class NCDSSession:
             print("Access to topic is not granted")
 
     def cont_stream_cmd(self):
-        consumer = self.ncds_client.ncds_kafka_consumer(
-            self.topic) if not self.timestamp else self.ncds_client.ncds_kafka_consumer(self.topic, self.timestamp)
+        ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
+        consumer = ncds_client.ncds_kafka_consumer(
+            self.topic) if not self.timestamp else ncds_client.ncds_kafka_consumer(self.topic, self.timestamp)
 
         try:
             while True:
-                message = consumer.poll(self.kafka_cfg[self.kafka_config_loader.TIMEOUT])
+                message = consumer.poll(self.kafka_cfg[self.kafka_config_loader.NUM_MESSAGES])
                 if message is None:
                     print(f"No Records Found for the Topic: {self.topic}")
                 else:
@@ -134,8 +140,9 @@ class NCDSSession:
         if self.msgnames is not None:
             msgname_set = set(self.msgnames.split(","))
 
-        consumer = self.ncds_client.ncds_kafka_consumer(
-            self.topic) if not self.timestamp else self.ncds_client.ncds_kafka_consumer(self.topic, self.timestamp)
+        ncds_client = NCDSClient(self.security_cfg, self.kafka_cfg)
+        consumer = ncds_client.ncds_kafka_consumer(
+            self.topic) if not self.timestamp else ncds_client.ncds_kafka_consumer(self.topic, self.timestamp)
 
         try:
             while True:

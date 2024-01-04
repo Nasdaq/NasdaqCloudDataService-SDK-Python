@@ -93,7 +93,7 @@ class NasdaqKafkaAvroConsumer():
             if auto_offset_cfg == "earliest" or auto_offset_cfg == "smallest" or auto_offset_cfg == "beginning":
                 self.logger.debug(
                     f"Auto offset reset config set to: {auto_offset_cfg}")
-                return SeekToMidnight.seek_to_midnight_at_past_day(kafka_consumer, topic_partition, 0)
+                return SeekToMidnight.seek_to_midnight_at_past_day(kafka_consumer, topic_partition, 0, self.kafka_props.get(self.kafka_config_loader.TIMEOUT))
 
             else:
                 return kafka_consumer
@@ -105,7 +105,7 @@ class NasdaqKafkaAvroConsumer():
                 self.logger.debug(
                     "offset: " + str(topic_partition.offset) + ", timestamp: " + str(timestamp))
                 offsets_for_times = kafka_consumer.offsets_for_times(
-                    [topic_partition], self.kafka_props.get(self.kafka_config_loader.TIMEOUT))
+                    [topic_partition], self.kafka_cfg.TIMEOUT)
             except Exception as e:
                 self.logger.exception(e)
                 sys.exit(0)
@@ -132,7 +132,7 @@ class NasdaqKafkaAvroConsumer():
             a :class:`.KafkaAvroConsumer` instance with a key and value deserializer set through the avro_schema parameter
         """
         if 'group.id' not in self.kafka_props:
-            self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{self.client_ID}_{stream_name}_{datetime.datetime.today().day}'
+            self.kafka_props[self.kafka_config_loader.GROUP_ID_CONFIG] = f'{self.client_ID}'
         return KafkaAvroConsumer(self.kafka_props, avro_schema)
 
     def get_schema_for_topic(self, topic):
