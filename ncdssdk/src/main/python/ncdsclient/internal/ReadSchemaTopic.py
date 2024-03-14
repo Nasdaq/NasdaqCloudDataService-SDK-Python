@@ -45,7 +45,6 @@ class ReadSchemaTopic:
                 try:
                     msg_val = message.value()
 
-                    latest_record = None
                     if "name" in msg_val and msg_val["name"] == topic:
                         latest_record = message
                     if latest_record and 'schema' in msg_val:
