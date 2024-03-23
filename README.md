@@ -390,7 +390,7 @@ value :{"SoupPartition": 0, "SoupSequence": 10, "trackingID": 11578719950254, "m
 
 ## Documentation
 
-An addition to the example application, there is extra documentation at the package and class level, which are located in project ```https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/tree/master/ncdssdk/docs```
+An addition to the example application, there is extra documentation at the package and class level, which are located in project [https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python​/tree/master/ncdssdk/docs](https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python/tree/master/ncdssdk/docs)
 
 ## Contributing
 
