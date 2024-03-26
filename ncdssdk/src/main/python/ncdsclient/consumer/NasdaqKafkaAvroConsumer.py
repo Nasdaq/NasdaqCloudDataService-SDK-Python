@@ -105,7 +105,7 @@ class NasdaqKafkaAvroConsumer():
                 self.logger.debug(
                     "offset: " + str(topic_partition.offset) + ", timestamp: " + str(timestamp))
                 offsets_for_times = kafka_consumer.offsets_for_times(
-                    [topic_partition], self.kafka_cfg.TIMEOUT)
+                    [topic_partition], self.kafka_props.get(self.kafka_config_loader.TIMEOUT))
             except Exception as e:
                 self.logger.exception(e)
                 sys.exit(0)
