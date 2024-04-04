@@ -99,20 +99,20 @@ class NasdaqKafkaAvroConsumer():
                 return kafka_consumer
 
         else:
-            self.logger.debug("Timestamp is not none: " + str(timestamp))
+            self.logger.debug("Timestamp is not none: %s", str(timestamp))
             try:
                 topic_partition.offset = timestamp
                 self.logger.debug(
-                    "offset: " + str(topic_partition.offset) + ", timestamp: " + str(timestamp))
+                    "offset: %s, timestamp: %s", str(topic_partition.offset), str(timestamp))
                 offsets_for_times = kafka_consumer.offsets_for_times(
                     [topic_partition], self.kafka_props.get(self.kafka_config_loader.TIMEOUT))
             except Exception as e:
                 self.logger.exception(e)
                 sys.exit(0)
             self.logger.debug(
-                "topic partition before offsets_for_times: " + str(topic_partition))
+                "topic partition before offsets_for_times: %s", str(topic_partition))
             self.logger.debug(
-                "topic partition after offsets for times: " + str(offsets_for_times))
+                "topic partition after offsets for times: %s", str(offsets_for_times))
             partition_offset = offsets_for_times[0].offset
             self.logger.debug(
                 f"Successfully received offset {partition_offset}")
