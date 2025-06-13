@@ -29,12 +29,13 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [Global Index Data Service](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GIDS_Cloud.pdf)
 ### Options
 #### Nasdaq U.S. Derivatives
-- [Nasdaq Smart Options](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NCDSSmartOptions.pdf)
+- [Nasdaq Smart Options]()
 - [Nasdaq Options Greeks and Implied Volatility](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GreeksandVols_Specification.pdf)
 ### Mutual Funds
 - [Nasdaq Fund Network](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NFNDS_NCDS.pdf)
 ### News
-- [Financial News](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/MTNewswires-cloud.pdf)
+- [Financial News - MT Newswires](http://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/MTNewswires-cloud.pdf)
+- [Benzinga Market Newswires](https://data.nasdaq.com/databases/BENZ)
 
 # Items To Note
 
