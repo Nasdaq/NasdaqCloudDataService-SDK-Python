@@ -25,7 +25,7 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [Nasdaq Canada Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Nasdaq-Basic-Canada-Cloud-Specification.pdf)
 #### OTC Markets
 - [OTC Markets](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/OTCM-cloud.pdf) (real-time & delayed)
-### Bruce Markets
+#### Bruce Markets
 - [Bruce Best Bid and Offer](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
 - [Bruce Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/799cedca497685290a3c972bb45fa5bc/NewLastSale_Cloud-2025-1.pdf)
 - [Bruce TotalView](https://assets.ctfassets.net/mx0rke14e5yt/2nwLafPib6CgIbFu63K4zo/71480a8ab9bb6f97190f056da7133c2e/Nasdaq_ITCH_Products_2025-1.pdf)
