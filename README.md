@@ -13,12 +13,12 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [Nasdaq Consolidated Quotes and Trades](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/CQT-cloud.pdf) (real-time & delayed)
 #### Nasdaq BX
 - [BX BBO v1](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/BX_BBO_Cloud.pdf)
-- [BX BBO v2](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/972e6f13fcf51b4001f481110f4c8204/NewLastSale_Cloud-2025-1.pdf)
+- [BX BBO v2](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
 - [BX Last Sale v3](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/BLS_Cloud.pdf)
 - [BX Last Sale v4](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/972e6f13fcf51b4001f481110f4c8204/NewLastSale_Cloud-2025-1.pdf)
 #### Nasdaq PSX
 - [PSX BBO v1](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/PSX_BBO_Cloud.pdf)
-- [PSX BBO v2](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/972e6f13fcf51b4001f481110f4c8204/NewLastSale_Cloud-2025-1.pdf)
+- [PSX BBO v2](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
 - [PSX Last Sale v3](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/PLS_Cloud.pdf)
 - [PSX Last Sale v4](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/972e6f13fcf51b4001f481110f4c8204/NewLastSale_Cloud-2025-1.pdf)
 #### Nasdaq Canada
