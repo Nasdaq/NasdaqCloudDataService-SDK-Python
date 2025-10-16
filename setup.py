@@ -8,7 +8,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='ncdssdk',
-    version='0.5.0',
+    version='0.5.1',
     description='A Python SDK for developing applications to access the NCDS API',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -28,7 +28,7 @@ setup(
     ],
     keywords='Nasdaq, NCDS, ncdssdk',
     packages=find_packages(),
-    python_requires='>=3.9, <4',
+    python_requires='>=3.9, <3.11',
     install_requires=open("requirements.in").readlines(),
 
     include_package_data=True,
