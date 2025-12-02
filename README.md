@@ -39,7 +39,7 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 # Items To Note
 
 * Connecting to the API requires credentials, which are provided by the Nasdaq Data Operations team during an on-boarding process
-* This sample code only connects to one topic (NLSCTA); during on-boarding process, you will receive a topic list that you're entitled to.
+* This sample code only connects to one topic (NLSPLUS-CTA-V4); during on-boarding process, you will receive a topic list that you're entitled to.
 * See https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java for our officially support Java-based SDK.
 
 
@@ -149,7 +149,7 @@ A few examples:
 
 Get first 100 records for given stream
 
-```python3.9 ncdssdk_client/src/main/python/ncdsclient/NCDSSession.py -opt TOP -n 100 -topic NLSCTA```
+```python3.9 ncdssdk_client/src/main/python/ncdsclient/NCDSSession.py -opt TOP -n 100 -topic NLSPLUS-CTA-V4```
 
 Get all available streams
 
@@ -190,15 +190,15 @@ kafka_cfg = {
   ```
   List of streams available on Nasdaq Cloud Data Service:
   GIDS
-  NLSUTP
-  NLSCTA
+  NLSPLUS-UTP-V4
+  NLSPLUS-CTA-V4
   ```
 
   ### Getting schema for the stream
   This method returns the schema for the stream in Apache Avro format (https://avro.apache.org/docs/current/spec.html)
   ```python
   ncds_client = NCDSClient(security_cfg, kafka_cfg)
-  topic = "NLSCTA"
+  topic = "NLSPLUS-CTA-V4"
   schema = ncds_client.get_schema_for_topic(topic)
   print(schema)
   ```
@@ -240,7 +240,7 @@ kafka_cfg = {
   ### Get first 10 messages of the stream 
   ```python
   ncds_client = NCDSClient(security_cfg, kafka_cfg)
-  topic = "NLSCTA"
+  topic = "NLSPLUS-CTA-V4"
   records = ncds_client.top_messages(topic)
   for i in range(0, 10):
       print("key: ", records[i].key())
@@ -248,7 +248,7 @@ kafka_cfg = {
   ```
   Example output:
   ```
-  Top 10 Records for the Topic: NLSCTA
+  Top 10 Records for the Topic: NLSPLUS-CTA-V4
 key: 14600739
 value: {"SoupPartition": 0, "SoupSequence": 14600739, "trackingID": 72000000024569, "msgType": "S", "event": "E", "schema_name": "SeqSystemEventMessage"}
 key: 14600740
@@ -275,7 +275,7 @@ value: {"SoupPartition": 0, "SoupSequence": 14600748, "trackingID": 729000000065
 This returns the first 10 available messages of the stream given timestamp in milliseconds since the UNIX epoch.
 ```python
 ncds_client = NCDSClient(security_cfg, kafka_cfg)
-topic="NLSCTA"
+topic="NLSPLUS-CTA-V4"
 timestamp = 1590084446510
 records = ncds_client.top_messages(topic, timestamp)
 for i in range(0, 10):
@@ -286,7 +286,7 @@ for i in range(0, 10):
 Example output:
 ```
 Offset: 105834100
-Top 10 Records for the Topic:NLSCTA
+Top 10 Records for the Topic:NLSPLUS-CTA-V4
 key:9362630
 value :{"SoupPartition": 0, "SoupSequence": 9362630, "trackingID": 50845551492208, "msgType": "T", "marketCenter": "L", "symbol": "SIVR    ", "securityClass": "P", "controlNumber": "0000A2MLOB", "price": 164797, "size": 1, "saleCondition": "@  o", "cosolidatedVolume": 520174}
 key:9362631
@@ -313,7 +313,7 @@ value :{"SoupPartition": 0, "SoupSequence": 9362639, "trackingID": 5084560059456
 Print message to the console for given message name.
 ```python
 ncds_client = NCDSClient(security_cfg, kafka_cfg)
-topic = "NLSCTA"
+topic = "NLSPLUS-CTA-V4"
 print(ncds_client.get_sample_messages(topic, "SeqDirectoryMessage", all_messages=False))
 ```
 
@@ -326,7 +326,7 @@ Example output:
 ```python
 
 ncds_client = NCDSClient(security_cfg, kafka_cfg)
-topic = "NLSCTA"
+topic = "NLSPLUS-CTA-V4"
 consumer = ncds_client.ncds_kafka_consumer(topic)
 while True:
     messages = consumer.consume(num_messages=1, timeout=5)
@@ -360,39 +360,39 @@ value :{"SoupPartition": 0, "SoupSequence": 10, "trackingID": 11578719950254, "m
 
 2. To display the schema for the given topic
 
-```python3.9 NCDSSession.py -opt SCHEMA -topic NLSCTA```
+```python3.9 NCDSSession.py -opt SCHEMA -topic NLSPLUS-CTA-V4```
 
 3. To dump top n records from the given topic
 
-```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSCTA```
+```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSPLUS-CTA-V4```
 
 4. To use client based specific authorization file instead of using from the resources of client code base
 
-```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSCTA -authprops client-authentication-config.json```
+```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSPLUS-CTA-V4 -authprops client-authentication-config.json```
 
 5. To use the specific kafka properties instead of using the kafka properties from the resources of the client base code
 
-```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSCTA -kafkaprops kafka-config.json```
+```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSPLUS-CTA-V4 -kafkaprops kafka-config.json```
 
 6. To use the specific client based authorization file and specific kafka properties file
 
-```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSCTA -authprops client-authentication-config.json -kafkaprops kafka-config.json```
+```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSPLUS-CTA-V4 -authprops client-authentication-config.json -kafkaprops kafka-config.json```
 
 7. To display a specific message type
 
-```python3.9 NCDSSession.py -opt GETMSG -topic NLSCTA -msgname SeqDirectoryMessage```
+```python3.9 NCDSSession.py -opt GETMSG -topic NLSPLUS-CTA-V4 -msgname SeqDirectoryMessage```
 
 8. To dump top n records from the given topic from given timestamp in milliseconds since the UNIX epoch
 
-```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSCTA -timestamp 1590084445610```
+```python3.9 NCDSSession.py -opt TOP -n 10 -topic NLSPLUS-CTA-V4 -timestamp 1590084445610```
 
 9. To retrieve a continuous stream of messages from the given topic
 
-```python3.9 NCDSSession.py -opt CONTSTREAM -topic NLSCTA```
+```python3.9 NCDSSession.py -opt CONTSTREAM -topic NLSPLUS-CTA-V4```
 
 10. To retrieve a stream of messages from the given topic, filtered by symbols or message names
 
-```python3.9 NCDSSession.py -opt FILTERSTREAM -topic NLSCTA -symbols SPCE```
+```python3.9 NCDSSession.py -opt FILTERSTREAM -topic NLSPLUS-CTA-V4 -symbols SPCE```
 
 ## Documentation
 
