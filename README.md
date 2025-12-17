@@ -8,7 +8,8 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [Nasdaq Basic](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)(real-time & delayed)
 - [Nasdaq Last Sale+](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf) (real-time & delayed)
 - [Nasdaq TotalView](https://assets.ctfassets.net/mx0rke14e5yt/2nwLafPib6CgIbFu63K4zo/71480a8ab9bb6f97190f056da7133c2e/Nasdaq_ITCH_Products_2025-1.pdf)
-- [Nasdaq Consolidated Quotes and Trades](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/CQT-cloud.pdf) (real-time & delayed)
+- [Nasdaq Consolidated Quotes and Trades V2](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/CQT-cloud.pdf) (real-time & delayed)
+- [Nasdaq Consolidated Quotes and Trades V3](https://images.ctfassets.net/mx0rke14e5yt/19Ud7WoFVS17VcIk4efxNd/8decf61dacc984ecdd6bad0192b6c7a5/CQT-cloud.pdf) (real-time & delayed)
 #### Nasdaq BX
 - [BX BBO](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
 - [BX Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf)
