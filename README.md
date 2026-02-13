@@ -6,22 +6,22 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 ### Equities
 #### The Nasdaq Stock Market
 - [Nasdaq Basic](https://assets.ctfassets.net/mx0rke14e5yt/1BMqS6qxiLo3nrdRWvoPYR/85ee6d7502d8929d31b0acfaff5d92f2/NasdaqBBO_Cloud-2025.pdf)(real-time & delayed)
-- [Nasdaq Last Sale+](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf) (real-time & delayed)
+- [Nasdaq Last Sale+](https://assets.ctfassets.net/mx0rke14e5yt/3QdPbjB96Z0Atz61FlQ4b4/63d4dd264bfc3c8a7653adef1b83e4c2/2-13_NewLastSale_Cloud-2025-1.pdf) (real-time & delayed)
 - [Nasdaq TotalView](https://assets.ctfassets.net/mx0rke14e5yt/4dUk9wkzHqggnKqfCtLMDz/78029c0f20980400baf218c993f3f11d/2-13_Nasdaq_ITCH_Products_5.pdf)
 - [Nasdaq Consolidated Quotes and Trades](https://assets.ctfassets.net/mx0rke14e5yt/19Ud7WoFVS17VcIk4efxNd/aa7a3bd8888cce5e85850da88cc4a352/2-13CQT-cloud.pdf) (real-time & delayed)
 #### Nasdaq Texas
 - [Texas BBO](https://assets.ctfassets.net/mx0rke14e5yt/1BMqS6qxiLo3nrdRWvoPYR/85ee6d7502d8929d31b0acfaff5d92f2/NasdaqBBO_Cloud-2025.pdf)
-- [Texas Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf)
+- [Texas Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/3QdPbjB96Z0Atz61FlQ4b4/63d4dd264bfc3c8a7653adef1b83e4c2/2-13_NewLastSale_Cloud-2025-1.pdf)
 #### Nasdaq PSX
 - [PSX BBO](https://assets.ctfassets.net/mx0rke14e5yt/1BMqS6qxiLo3nrdRWvoPYR/85ee6d7502d8929d31b0acfaff5d92f2/NasdaqBBO_Cloud-2025.pdf)
-- [PSX Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf)
+- [PSX Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/3QdPbjB96Z0Atz61FlQ4b4/63d4dd264bfc3c8a7653adef1b83e4c2/2-13_NewLastSale_Cloud-2025-1.pdf)
 #### Nasdaq Canada
 - [Nasdaq Canada Basic](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Nasdaq-Basic-Canada-Cloud-Specification.pdf)
 #### OTC Markets
 - [OTC Markets](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/OTCM-cloud.pdf) (real-time & delayed)
 #### Bruce Markets
-- [Bruce Best Bid and Offer](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
-- [Bruce Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf)
+- [Bruce Best Bid and Offer](https://assets.ctfassets.net/mx0rke14e5yt/1BMqS6qxiLo3nrdRWvoPYR/85ee6d7502d8929d31b0acfaff5d92f2/NasdaqBBO_Cloud-2025.pdf)
+- [Bruce Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/3QdPbjB96Z0Atz61FlQ4b4/63d4dd264bfc3c8a7653adef1b83e4c2/2-13_NewLastSale_Cloud-2025-1.pdf)
 - [Bruce Depth of Book](https://assets.ctfassets.net/mx0rke14e5yt/2nwLafPib6CgIbFu63K4zo/71480a8ab9bb6f97190f056da7133c2e/Nasdaq_ITCH_Products_2025-1.pdf)
 ### Indexes & ETPs
 - [Global Index Data Service](http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/GIDS_Cloud.pdf)
