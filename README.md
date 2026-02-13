@@ -8,7 +8,7 @@ Nasdaq Data Link provides a modern and efficient method of delivery for realtime
 - [Nasdaq Basic](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)(real-time & delayed)
 - [Nasdaq Last Sale+](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf) (real-time & delayed)
 - [Nasdaq TotalView](https://assets.ctfassets.net/mx0rke14e5yt/2nwLafPib6CgIbFu63K4zo/71480a8ab9bb6f97190f056da7133c2e/Nasdaq_ITCH_Products_2025-1.pdf)
-- [Nasdaq Consolidated Quotes and Trades](https://images.ctfassets.net/mx0rke14e5yt/19Ud7WoFVS17VcIk4efxNd/b473e27355d2132d32fec7d443b0d97b/CQT-cloud.pdf) (real-time & delayed)
+- [Nasdaq Consolidated Quotes and Trades](https://assets.ctfassets.net/mx0rke14e5yt/19Ud7WoFVS17VcIk4efxNd/aa7a3bd8888cce5e85850da88cc4a352/2-13CQT-cloud.pdf) (real-time & delayed)
 #### Nasdaq Texas
 - [Texas BBO](https://assets.ctfassets.net/mx0rke14e5yt/7EKUREHBRJYUj35F5TEWYr/c43c31cc7dbaaefdbcfbe7381acc763f/NasdaqBBO_Cloud-2025.pdf)
 - [Texas Last Sale](https://assets.ctfassets.net/mx0rke14e5yt/2O7Da5RPfo9Xnha7sCRjHh/be43dffd095ba2ba0ce65b1689cc228f/NewLastSale_Cloud-2025-1.pdf)
